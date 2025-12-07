@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karne - Corporate Learning Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .slide {
+            display: none;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .language-switcher {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            padding: 0.5rem 1rem;
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .lang-btn:hover, .lang-btn.active {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        @media print {
+            .language-switcher { display: none; }
+            .slide {
+                display: flex !important;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                padding: 1rem;
+            }
+            .slide-content {
+                max-width: 100%;
+                width: 100%;
+            }
+            .print-compact {
+                margin-bottom: 1rem !important;
+            }
+            .print-compact .space-y-8 > * + * {
+                margin-top: 1rem !important;
+            }
+        }
+        .slide-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .presentation-nav {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            padding: 1rem 2rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .slide-indicator {
+            background: rgba(255, 255, 255, 0.2);
+            height: 4px;
+            border-radius: 2px;
+            flex: 1;
+            margin: 0 0.5rem;
+        }
+        .slide-progress {
+            background: linear-gradient(90deg, #ec4899, #8b5cf6);
+            height: 100%;
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+        .slide-number {
+            color: white;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        @media print {
+            .presentation-nav { display: none; }
+            .slide { display: flex !important; page-break-after: always; }
+            .slide:last-child { page-break-after: avoid; }
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-white font-inter">
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="lang-btn active" onclick="changeLanguage('en')">EN</button>
+        <button class="lang-btn" onclick="changeLanguage('tr')">TR</button>
+    </div>
+
+    <!-- Slide 1: Hero -->
+    <div class="slide active" id="slide-1">
+        <div class="slide-content">
+            <div class="text-center">
+                <h1 class="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
+                    Karne
+                </h1>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 text-white" data-translate="hero.title">
+                    Your Corporate <span class="text-pink-400">Learning Partner</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed" data-translate="hero.subtitle">
+                    Transform your organization's learning processes with a <span class="text-pink-400 font-semibold">low-cost</span>, 
+                    <span class="text-purple-400 font-semibold">easy-to-use</span>, and 
+                    <span class="text-blue-400 font-semibold">quickly deployable</span> platform.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 2: Why Choose MeLearning -->
+    <div class="slide" id="slide-2">
+        <div class="slide-content print-compact">
+            <div class="text-center mb-8 print-compact">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white" data-translate="why.title">
+                    Why Choose <span class="text-pink-400">Karne?</span>
+                </h2>
+                <p class="text-lg text-slate-300 max-w-3xl mx-auto" data-translate="why.subtitle">
+                    Four key advantages that make us the perfect choice for your organization
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-6 print-compact">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl flex items-center justify-center mr-3">
+                                <i class="fas fa-dollar-sign text-white text-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white" data-translate="why.benefit1.title">Cost Effective Solution</h3>
+                        </div>
+                        <p class="text-slate-300" data-translate="why.benefit1.desc">Significantly reduce training costs while maintaining high-quality educational content and delivery.</p>
+                    </div>
+                    
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl flex items-center justify-center mr-3">
+                                <i class="fas fa-edit text-white text-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white" data-translate="why.benefit2.title">Easy Content Management</h3>
+                        </div>
+                        <p class="text-slate-300" data-translate="why.benefit2.desc">Create, edit, and manage training content effortlessly with our intuitive content creation tools.</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-6 print-compact">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center mr-3">
+                                <i class="fas fa-cogs text-white text-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white" data-translate="why.benefit3.title">Fully Customizable</h3>
+                        </div>
+                        <p class="text-slate-300" data-translate="why.benefit3.desc">Tailor the platform to match your institution's specific needs and branding requirements.</p>
+                    </div>
+                    
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 bg-gradient-to-r from-cyan-600 to-teal-600 rounded-xl flex items-center justify-center mr-3">
+                                <i class="fas fa-plug text-white text-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white" data-translate="why.benefit4.title">Easy Integration</h3>
+                        </div>
+                        <p class="text-slate-300" data-translate="why.benefit4.desc">Seamlessly integrate with your existing ERP, CRM, and other business systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Key Features -->
+    <div class="slide" id="slide-3">
+        <div class="slide-content">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6 text-white" data-translate="features.title">
+                    Key <span class="text-pink-400">Features</span>
+                </h2>
+                <p class="text-xl text-slate-300 max-w-3xl mx-auto" data-translate="features.subtitle">
+                    Everything you need for modern corporate learning
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4" data-translate="features.feature1.title">Multi-User Support</h3>
+                    <p class="text-slate-300" data-translate="features.feature1.desc">Support unlimited learners with role-based access control and progress tracking.</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4" data-translate="features.feature2.title">Mobile Responsive</h3>
+                    <p class="text-slate-300" data-translate="features.feature2.desc">Access learning content anywhere, anytime with our fully responsive design.</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4" data-translate="features.feature3.title">Analytics & Reports</h3>
+                    <p class="text-slate-300" data-translate="features.feature3.desc">Comprehensive analytics to track learning progress and measure training effectiveness.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Technology & Innovation -->
+    <div class="slide" id="slide-4">
+        <div class="slide-content">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6 text-white" data-translate="tech.title">
+                    Modern <span class="text-pink-400">Technology</span>
+                </h2>
+                <p class="text-xl text-slate-300 max-w-3xl mx-auto" data-translate="tech.subtitle">
+                    Built with cutting-edge technology for today's learning needs
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-cloud text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4" data-translate="tech.tech1.title">Cloud-Based SaaS</h3>
+                    <p class="text-slate-300" data-translate="tech.tech1.desc">Access your learning platform from anywhere with our secure cloud infrastructure.</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4" data-translate="tech.tech2.title">Enterprise Security</h3>
+                    <p class="text-slate-300" data-translate="tech.tech2.desc">Bank-level security with data encryption and compliance standards.</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-rocket text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4" data-translate="tech.tech3.title">Rapid Deployment</h3>
+                    <p class="text-slate-300" data-translate="tech.tech3.desc">Get up and running in minutes, not months with our instant setup.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: References -->
+    <div class="slide" id="slide-5">
+        <div class="slide-content">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6 text-white" data-translate="refs.title">
+                    Trusted <span class="text-pink-400">Partners</span>
+                </h2>
+                <p class="text-xl text-slate-300 max-w-3xl mx-auto" data-translate="refs.subtitle">
+                    Leading organizations that trust Karne
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-flag-europe text-white text-sm"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-white mb-2" data-translate="refs.ref1.title">Delegation of the European Union to Türkiye</h3>
+                    <p class="text-slate-300 text-xs" data-translate="refs.ref1.desc">Official EU representation supporting educational initiatives.</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-university text-white text-sm"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-white mb-2" data-translate="refs.ref2.title">Yıldız Technical University</h3>
+                    <p class="text-slate-300 text-xs" data-translate="refs.ref2.desc">Leading technical university providing academic expertise.</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-building text-white text-sm"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-white mb-2" data-translate="refs.ref3.title">Emlak Yatırım A.Ş</h3>
+                    <p class="text-slate-300 text-xs" data-translate="refs.ref3.desc">Leading real estate investment company using our platform.</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-cyan-600 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-industry text-white text-sm"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-white mb-2" data-translate="refs.ref4.title">ARD Grup Holding A.Ş.</h3>
+                    <p class="text-slate-300 text-xs" data-translate="refs.ref4.desc">Leading holding company using our platform.</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-teal-600 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-landmark text-white text-sm"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-white mb-2" data-translate="refs.ref5.title">Türkiye Cumhuriyeti Aile ve Sosyal Hizmetler Bakanlığı</h3>
+                    <p class="text-slate-300 text-xs" data-translate="refs.ref5.desc">Ministry of Family and Social Services using our platform.</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-globe text-white text-sm"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-white mb-2" data-translate="refs.ref6.title">T.C. Dışişleri Bakanlığı Avrupa Birliği Başkanlığı</h3>
+                    <p class="text-slate-300 text-xs" data-translate="refs.ref6.desc">Ministry of Foreign Affairs EU Presidency using our platform.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: Call to Action -->
+    <div class="slide" id="slide-6">
+        <div class="slide-content">
+            <div class="text-center">
+                <h2 class="text-5xl md:text-6xl font-bold mb-8 text-white" data-translate="cta.title">
+                    Ready to Transform Your <span class="text-pink-400">Learning?</span>
+                </h2>
+                <p class="text-2xl text-slate-300 mb-12 max-w-4xl mx-auto" data-translate="cta.subtitle">
+                    Discover how Karne can revolutionize your organization's training approach with our innovative learning management platform
+                </p>
+                
+                <div class="text-slate-400 text-lg">
+                    <i class="fas fa-envelope mr-2"></i>
+                    info@milapasa.com
+                    <span class="mx-4">•</span>
+                    <i class="fas fa-phone mr-2"></i>
+                    +90 535 104 94 35
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="presentation-nav">
+        <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <div class="slide-indicator">
+            <div class="slide-progress" id="progressBar"></div>
+        </div>
+        
+        <div class="slide-number">
+            <span id="currentSlide">1</span> / <span id="totalSlides">6</span>
+        </div>
+        
+        <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        document.getElementById('totalSlides').textContent = totalSlides;
+        
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+            
+            document.getElementById('currentSlide').textContent = index + 1;
+            document.getElementById('progressBar').style.width = `${((index + 1) / totalSlides) * 100}%`;
+            
+            document.getElementById('prevBtn').disabled = index === 0;
+            document.getElementById('nextBtn').disabled = index === totalSlides - 1;
+        }
+        
+        function changeSlide(direction) {
+            const newIndex = currentSlideIndex + direction;
+            if (newIndex >= 0 && newIndex < totalSlides) {
+                currentSlideIndex = newIndex;
+                showSlide(currentSlideIndex);
+            }
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+            if (e.key === 'Home') { currentSlideIndex = 0; showSlide(currentSlideIndex); }
+            if (e.key === 'End') { currentSlideIndex = totalSlides - 1; showSlide(currentSlideIndex); }
+        });
+        
+        // Initialize
+        showSlide(0);
+
+        // Translation data
+        const translations = {
+            en: {
+                hero: {
+                    title: "Your Corporate <span class=\"text-pink-400\">Learning Partner</span>",
+                    subtitle: "Transform your organization's learning processes with a <span class=\"text-pink-400 font-semibold\">low-cost</span>, <span class=\"text-purple-400 font-semibold\">easy-to-use</span>, and <span class=\"text-blue-400 font-semibold\">quickly deployable</span> platform."
+                },
+                why: {
+                    title: "Why Choose <span class=\"text-pink-400\">Karne?</span>",
+                    subtitle: "Four key advantages that make us the perfect choice for your organization",
+                    benefit1: {
+                        title: "Cost Effective Solution",
+                        desc: "Significantly reduce training costs while maintaining high-quality educational content and delivery."
+                    },
+                    benefit2: {
+                        title: "Easy Content Management",
+                        desc: "Create, edit, and manage training content effortlessly with our intuitive content creation tools."
+                    },
+                    benefit3: {
+                        title: "Fully Customizable",
+                        desc: "Tailor the platform to match your institution's specific needs and branding requirements."
+                    },
+                    benefit4: {
+                        title: "Easy Integration",
+                        desc: "Seamlessly integrate with your existing ERP, CRM, and other business systems."
+                    }
+                },
+                features: {
+                    title: "Key <span class=\"text-pink-400\">Features</span>",
+                    subtitle: "Everything you need for modern corporate learning",
+                    feature1: {
+                        title: "Multi-User Support",
+                        desc: "Support unlimited learners with role-based access control and progress tracking."
+                    },
+                    feature2: {
+                        title: "Mobile Responsive",
+                        desc: "Access learning content anywhere, anytime with our fully responsive design."
+                    },
+                    feature3: {
+                        title: "Analytics & Reports",
+                        desc: "Comprehensive analytics to track learning progress and measure training effectiveness."
+                    }
+                },
+                tech: {
+                    title: "Modern <span class=\"text-pink-400\">Technology</span>",
+                    subtitle: "Built with cutting-edge technology for today's learning needs",
+                    tech1: {
+                        title: "Cloud-Based SaaS",
+                        desc: "Access your learning platform from anywhere with our secure cloud infrastructure."
+                    },
+                    tech2: {
+                        title: "Enterprise Security",
+                        desc: "Bank-level security with data encryption and compliance standards."
+                    },
+                    tech3: {
+                        title: "Rapid Deployment",
+                        desc: "Get up and running in minutes, not months with our instant setup."
+                    }
+                },
+                refs: {
+                    title: "Trusted <span class=\"text-pink-400\">Partners</span>",
+                    subtitle: "Leading organizations that trust Karne",
+                    ref1: {
+                        title: "Delegation of the European Union to Türkiye",
+                        desc: "Official EU representation supporting educational initiatives."
+                    },
+                    ref2: {
+                        title: "Yıldız Technical University",
+                        desc: "Leading technical university providing academic expertise."
+                    },
+                    ref3: {
+                        title: "Emlak Yatırım A.Ş",
+                        desc: "Leading real estate investment company using our platform."
+                    },
+                    ref4: {
+                        title: "ARD Grup Holding A.Ş.",
+                        desc: "Leading holding company using our platform."
+                    },
+                    ref5: {
+                        title: "Türkiye Cumhuriyeti Aile ve Sosyal Hizmetler Bakanlığı",
+                        desc: "Ministry of Family and Social Services using our platform."
+                    },
+                    ref6: {
+                        title: "T.C. Dışişleri Bakanlığı Avrupa Birliği Başkanlığı",
+                        desc: "Ministry of Foreign Affairs EU Presidency using our platform."
+                    }
+                },
+                cta: {
+                    title: "Ready to Scale Your <span class=\"text-pink-400\">Educational Impact?</span>",
+                    subtitle: "Discover how Karne can revolutionize your organization's training approach with our innovative learning management platform"
+                }
+            },
+            tr: {
+                hero: {
+                    title: "Kurumsal <span class=\"text-pink-400\">Öğrenme Ortağınız</span>",
+                    subtitle: "Kurumsal eğitim ihtiyaçlarınızı karşılamak için tasarlanmış <span class=\"text-pink-400 font-semibold\">maliyet etkin</span>, <span class=\"text-purple-400 font-semibold\">kullanıcı dostu</span> ve <span class=\"text-blue-400 font-semibold\">hızlı kurulum</span> özelliklerine sahip kapsamlı öğrenme yönetim platformumuzla organizasyonunuzun eğitim süreçlerini modernize edin ve çalışanlarınızın gelişimini destekleyin."
+                },
+                why: {
+                    title: "Neden <span class=\"text-pink-400\">Karne?</span>",
+                    subtitle: "Organizasyonunuz için mükemmel seçim yapan dört temel avantaj",
+                    benefit1: {
+                        title: "Maliyet Etkin Çözüm",
+                        desc: "Yüksek kaliteli eğitim içeriği ve sunumu korurken eğitim maliyetlerini önemli ölçüde azaltın."
+                    },
+                    benefit2: {
+                        title: "Kolay İçerik Yönetimi",
+                        desc: "Sezgisel içerik oluşturma araçlarımızla eğitim içeriğini zahmetsizce oluşturun, düzenleyin ve yönetin."
+                    },
+                    benefit3: {
+                        title: "Tamamen Özelleştirilebilir",
+                        desc: "Platformu kurumunuzun özel ihtiyaçlarına ve marka gereksinimlerine uyacak şekilde uyarlayın."
+                    },
+                    benefit4: {
+                        title: "Kolay Entegrasyon",
+                        desc: "Mevcut ERP, CRM ve diğer iş sistemlerinizle sorunsuz entegrasyon sağlayın."
+                    }
+                },
+                features: {
+                    title: "Temel <span class=\"text-pink-400\">Özellikler</span>",
+                    subtitle: "Modern kurumsal öğrenme için ihtiyacınız olan her şey",
+                    feature1: {
+                        title: "Çoklu Kullanıcı Desteği",
+                        desc: "Rol tabanlı erişim kontrolü ve ilerleme takibi ile sınırsız öğrenciyi destekleyin."
+                    },
+                    feature2: {
+                        title: "Mobil Uyumlu",
+                        desc: "Tamamen duyarlı tasarımımızla öğrenme içeriğine her yerden, her zaman erişin."
+                    },
+                    feature3: {
+                        title: "Analitik ve Raporlar",
+                        desc: "Öğrenme ilerlemesini takip etmek ve eğitim etkinliğini ölçmek için kapsamlı analitik."
+                    }
+                },
+                tech: {
+                    title: "Modern <span class=\"text-pink-400\">Teknoloji</span>",
+                    subtitle: "Günümüzün öğrenme ihtiyaçları için en son teknoloji ile geliştirildi",
+                    tech1: {
+                        title: "Bulut Tabanlı SaaS",
+                        desc: "Güvenli bulut altyapımızla öğrenme platformunuza her yerden erişin."
+                    },
+                    tech2: {
+                        title: "Kurumsal Güvenlik",
+                        desc: "Veri şifreleme ve uyumluluk standartları ile banka seviyesinde güvenlik."
+                    },
+                    tech3: {
+                        title: "Hızlı Kurulum",
+                        desc: "Anında kurulumumuzla dakikalar içinde çalışmaya başlayın, aylar değil."
+                    }
+                },
+                refs: {
+                    title: "Güvenilen <span class=\"text-pink-400\">Ortaklar</span>",
+                    subtitle: "Karne'e güvenen önde gelen organizasyonlar",
+                    ref1: {
+                        title: "Avrupa Birliği Türkiye Delegasyonu",
+                        desc: "Eğitim girişimlerini destekleyen resmi AB temsilciliği."
+                    },
+                    ref2: {
+                        title: "Yıldız Teknik Üniversitesi",
+                        desc: "Eğitim programlarımız için akademik uzmanlık sağlayan önde gelen teknik üniversite."
+                    },
+                    ref3: {
+                        title: "Emlak Yatırım A.Ş",
+                        desc: "Platformumuzu kullanan önde gelen gayrimenkul yatırım şirketi."
+                    },
+                    ref4: {
+                        title: "ARD Grup Holding A.Ş.",
+                        desc: "Platformumuzu kullanan önde gelen holding şirketi."
+                    },
+                    ref5: {
+                        title: "Türkiye Cumhuriyeti Aile ve Sosyal Hizmetler Bakanlığı",
+                        desc: "Platformumuzu kullanan Aile ve Sosyal Hizmetler Bakanlığı."
+                    },
+                    ref6: {
+                        title: "T.C. Dışişleri Bakanlığı Avrupa Birliği Başkanlığı",
+                        desc: "Platformumuzu kullanan Dışişleri Bakanlığı AB Başkanlığı."
+                    }
+                },
+                cta: {
+                    title: "Eğitim Etkinizi <span class=\"text-pink-400\">Büyütmeye</span> Hazır mısınız?",
+                    subtitle: "Yenilikçi öğrenme yönetim platformumuzla organizasyonunuzun eğitim yaklaşımını nasıl devrim niteliğinde değiştirebileceğini keşfedin"
+                }
+            }
+        };
+
+        let currentLanguage = 'en';
+
+        function getNestedTranslation(obj, path) {
+            return path.split('.').reduce((current, key) => current && current[key], obj);
+        }
+
+        function translatePage(language) {
+            currentLanguage = language;
+            
+            // Update language buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[onclick="changeLanguage('${language}')"]`).classList.add('active');
+            
+            // Translate all elements with data-translate attribute
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                const translation = getNestedTranslation(translations[language], key);
+                if (translation) {
+                    element.innerHTML = translation;
+                }
+            });
+        }
+
+        function changeLanguage(language) {
+            translatePage(language);
+        }
+
+        // Initialize with English
+        translatePage('en');
+    </script>
+</body>
+</html>
+</html>
