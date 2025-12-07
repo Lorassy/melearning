@@ -1,0 +1,15 @@
+{
+  "name": "karne-frontend",
+  "version": "1.0.0",
+  "description": "Karne - Professional E-Learning Platform",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "watch-css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "npm run build-css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "autoprefixer": "^10.4.18",
+    "postcss": "^8.4.35"
+  }
+}
