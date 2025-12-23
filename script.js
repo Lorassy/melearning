@@ -59,9 +59,9 @@ const translations = {
     nav: {
       home: "Home",
       about: "About",
-      courses: "Courses",
       references: "References",
       contact: "Contact",
+      login: "Login",
     },
     hero: {
       title:
@@ -104,6 +104,18 @@ const translations = {
       tracking: {
         title: "Progress Tracking",
         desc: "Monitor your learning progress with detailed analytics and performance reports.",
+      },
+      secure: {
+        title: "Secure Platform",
+        desc: "Enterprise-grade security",
+      },
+      mobile_ready: {
+        title: "Mobile Ready",
+        desc: "Learn on any device",
+      },
+      support: {
+        title: "24/7 Support",
+        desc: "Always here to help",
       },
     },
     about: {
@@ -216,9 +228,9 @@ const translations = {
     nav: {
       home: "Ana Sayfa",
       about: "Hakkımızda",
-      courses: "Kurslar",
       references: "Referanslar",
       contact: "İletişim",
+      login: "Giriş Yap",
     },
     hero: {
       title:
@@ -261,6 +273,18 @@ const translations = {
       tracking: {
         title: "İlerleme Takibi",
         desc: "Detaylı analitikler ve performans raporları ile öğrenme ilerlemenizi izleyin.",
+      },
+      secure: {
+        title: "Güvenli Platform",
+        desc: "Kurumsal düzeyde güvenlik",
+      },
+      mobile_ready: {
+        title: "Mobil Uyumlu",
+        desc: "Her cihazda öğrenin",
+      },
+      support: {
+        title: "7/24 Destek",
+        desc: "Her zaman yanınızdayız",
       },
     },
     about: {
@@ -373,9 +397,9 @@ const translations = {
     nav: {
       home: "Startseite",
       about: "Über uns",
-      courses: "Kurse",
       references: "Referenzen",
       contact: "Kontakt",
+      login: "Anmelden",
     },
     hero: {
       title:
@@ -418,6 +442,18 @@ const translations = {
       tracking: {
         title: "Fortschrittsverfolgung",
         desc: "Überwachen Sie Ihren Lernfortschritt mit detaillierten Analysen und Leistungsberichten.",
+      },
+      secure: {
+        title: "Sichere Plattform",
+        desc: "Unternehmensgrade Sicherheit",
+      },
+      mobile_ready: {
+        title: "Mobil Bereit",
+        desc: "Lernen Sie auf jedem Gerät",
+      },
+      support: {
+        title: "24/7 Support",
+        desc: "Immer hier, um zu helfen",
       },
     },
     about: {
@@ -530,9 +566,9 @@ const translations = {
     nav: {
       home: "Accueil",
       about: "À propos",
-      courses: "Cours",
       references: "Références",
       contact: "Contact",
+      login: "Connexion",
     },
     hero: {
       title:
@@ -575,6 +611,18 @@ const translations = {
       tracking: {
         title: "Suivi des Progrès",
         desc: "Surveillez vos progrès d'apprentissage avec des analyses détaillées et des rapports de performance.",
+      },
+      secure: {
+        title: "Plateforme Sécurisée",
+        desc: "Sécurité de niveau entreprise",
+      },
+      mobile_ready: {
+        title: "Prêt pour Mobile",
+        desc: "Apprenez sur n'importe quel appareil",
+      },
+      support: {
+        title: "Support 24/7",
+        desc: "Toujours là pour vous aider",
       },
     },
     about: {
