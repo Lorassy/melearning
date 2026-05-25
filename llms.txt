@@ -1,0 +1,119 @@
+# Karne — Yapay Zeka Destekli Modern Öğrenme Deneyimi Platformu
+
+> Karne, yapay zeka ile dakikalar içinde eğitim içeriği üretmenizi sağlayan, kurumsal öğrenme deneyimini baştan tanımlayan bir LXP (Learning Experience Platform)'dur. Klasik LMS değil — AI destekli, sınırsız kullanıcı, yerinde kurulum veya bulut.
+
+## Platform Nedir?
+
+Karne; özel sektör ve kamu kurumlarına yönelik, yapay zeka destekli bir Modern Öğrenme Deneyimi Platformu'dur (LXP). PDF, Word veya PowerPoint belgelerini yükleyerek dakikalar içinde profesyonel eğitim içeriği oluşturabilir, eğitim videolarına dönüştürebilir ve binlerce çalışana sunabilirsiniz.
+
+Geleneksel LMS'lerden (SCORM tabanlı, statik içerik yöneten sistemler) temel farkı: teknik ekip gerekmez, kullanıcı başına lisans yoktur, yapay zeka içeriği sizin için üretir.
+
+## Temel Özellikler
+
+- **AI İçerik Üretimi**: PDF/Word/PPTX yükle → AI otomatik kurs yapısı, özetler ve test soruları oluşturur (ortalama 2–5 dakika)
+- **PDF → Eğitim Videosu**: Belgelerinizi AI seslendirmesiyle eğitim videolarına dönüştürür
+- **AI Outline**: Konu başlığı gir → AI kurs taslağı ve öğrenme çıktıları oluşturur
+- **Oyunlaştırma**: Puanlar, rozetler, liderlik tablosu ile tamamlama oranlarını artırır (%45'ten %92'ye)
+- **Yetkinlik Değerlendirme**: Çalışan yetkinlik haritası, 360° geri bildirim ve gap analizi
+- **Öğrenme Yolları**: Pozisyon bazlı kişiselleştirilmiş kariyer gelişim rotaları
+- **Oryantasyon**: Yeni çalışanları otomatik sürece dahil eden onboarding sistemi
+- **Raporlama & Analitik**: Birey, ekip ve kurum bazında canlı dashboard'lar ve dışa aktarılabilir raporlar
+- **Entegrasyon & Kurulum**: Cloud veya on-premise. SSO, LDAP, SCORM, REST API — mevcut altyapıya uyum
+- **Sınırsız Kullanıcı**: 5 kişi de kullansa 50.000 kişi de — fiyat değişmez
+- **GDPR/KVKK Uyumlu**: Tüm veriler kurumun kendi altyapısında tutulabilir
+- **Dijital Sertifika**: QR kodlu, doğrulanabilir sertifikalar
+- **4 Dil Desteği**: Türkçe, İngilizce, Almanca, Fransızca
+
+## Kanıtlanmış Sonuçlar
+
+- İçerik üretim süreci klasik yönteme kıyasla **%80 daha hızlı**
+- Oyunlaştırma ile eğitim tamamlanma oranı **%45'ten %92'ye** çıktı
+- **5+ Bakanlık ve kamu kurumu** aktif kullanıcı
+- Kullanıcı başına **0 ek maliyet** — büyüdükçe sabit fiyat
+
+## Kimler Kullanıyor?
+
+- Türkiye Cumhuriyeti bakanlıkları (Aile ve Sosyal Hizmetler, Ulaştırma ve Altyapı, Dışişleri Bakanlığı AB İşleri)
+- Yıldız Teknik Üniversitesi
+- AB Türkiye Delegasyonu
+- Kamu Görevlileri Etik Kurulu
+- Özel sektör şirketleri
+
+## Kullanım Alanları
+
+Karne aşağıdaki kurumsal senaryolar için optimize edilmiştir:
+
+- **Oryantasyon & İşe Alım**: Yeni çalışanları yapılandırılmış onboarding programlarıyla hızla entegre edin
+- **Satış Ekipleri**: Ürün bilgisi, müzakere ve kapanış becerilerini gamification ile pekiştirin
+- **Teknik Eğitimler**: IT, yazılım ve mühendislik ekipleri için hands-on içerik ve skill gap analizi
+- **Kamu Kurumları**: On-premise kurulum, sınırsız kullanıcı, mevzuat ve KVKK uyumu
+- **Liderlik Geliştirme**: Orta ve üst kademe yöneticiler için kişiselleştirilmiş gelişim yolları
+- **STK & Sivil Toplum**: Gönüllüler ve saha ekipleri için uzaktan eğitim yönetimi
+
+## Klasik LMS'den Farkı
+
+| Geleneksel LMS | Karne LXP |
+|-------------------------|-----------|
+| Statik içerik, kendin hazırla | AI ile dakikalar içinde içerik üretimi |
+| IT ekibi gerektirir | Teknik bilgisiz yönetim |
+| Kullanıcı başına lisans | Sınırsız kullanıcı, sabit fiyat |
+| Sadece kurs takibi | Oyunlaştırma, yetenek, kariyer gelişimi |
+| On-premise VEYA bulut | İkisi birden mümkün |
+| Eklenti/modül ile gamification | Kutudan çıkar, entegre |
+
+## Yapay Zeka ile İçerik Üretimi — Adım Adım
+
+1. PDF, Word veya PowerPoint dosyanızı Karne'ye yükleyin
+2. Yapay zeka otomatik kurs bölümleri, özetler ve test soruları oluşturur (2–5 dk)
+3. AI çıktısını inceleyin ve onaylayın
+4. Tek tıkla yayınlayın — sınırsız kullanıcı ile paylaşın
+
+## Sayfalar
+
+- [Ana Sayfa](https://karne.app/) — Platform tanıtımı, tüm özellikler, referanslar ve iletişim
+- [AI İçerik Üretimi](https://karne.app/features/ai-icerik-uretimi) — PDF, Word veya PowerPoint'ten otomatik kurs, quiz ve video senaryosu üretimi
+- [Oyunlaştırma](https://karne.app/features/oyunlastirma) — Puan, rozet ve liderlik tablosuyla eğitim motivasyonu artırma
+- [Yetkinlik Değerlendirme](https://karne.app/features/yetkinlik-degerlendirme) — Skill haritası, 360° geri bildirim ve gap analizi
+- [Öğrenme Yolları](https://karne.app/features/ogrenme-yollari) — Pozisyon bazlı kişiselleştirilmiş kariyer gelişim rotaları
+- [Raporlama & Analitik](https://karne.app/features/raporlama-analitik) — Canlı dashboard'lar ve dışa aktarılabilir öğrenme raporları
+- [Entegrasyon & Kurulum](https://karne.app/features/entegrasyon-kurulum) — Cloud, on-premise, SSO, LDAP, SCORM entegrasyonu
+- [Oryantasyon & İşe Alım](https://karne.app/use-cases/oryantasyon) — Yeni çalışan onboarding otomasyonu
+- [Satış Ekipleri Eğitimi](https://karne.app/use-cases/satis-ekipleri) — Gamification ile satış eğitimi ve performans artırma
+- [STK & Sivil Toplum](https://karne.app/use-cases/stk-sivil-toplum) — Gönüllü ve saha ekibi uzaktan eğitim yönetimi
+- [Teknik Eğitimler](https://karne.app/use-cases/teknik-egitimler) — IT, yazılım ve mühendislik ekipleri için LXP
+- [Kamu Kurumları](https://karne.app/use-cases/kamu-kurumlari) — On-premise, sınırsız kullanıcı, KVKK uyumlu eğitim yönetimi
+- [Liderlik Geliştirme](https://karne.app/use-cases/liderlik) — Orta ve üst kademe yönetici gelişim programları
+
+## İletişim ve Erişim
+
+- Web: https://karne.app
+- Platform: https://my.karne.app
+- E-posta: info@milapasa.com
+- Tel: +90 535 104 94 35
+- Adres: Söğütözü Cd. No:2, Koç Kuleleri C Blok 17, Çankaya / Ankara
+
+## Sık Sorulan Sorular
+
+**Karne nedir?**
+Karne, yapay zeka destekli modern bir Öğrenme Deneyimi Platformu'dur (LXP). Özel sektör ve kamu — her tür kurum için uygundur.
+
+**AI ile nasıl içerik üretilir?**
+PDF/Word/PPTX yükleyin → AI kurs yapısı oluşturur. Konu yazın → AI taslak çıkarır, içerik hazırlar. PDF belgelerini AI seslendirmesiyle videoya dönüştürün.
+
+**Kullanıcı sınırı var mı?**
+Hayır. Sınırsız kullanıcı ve içerik. Büyüdükçe maliyet artmaz.
+
+**KVKK uyumlu mu?**
+Evet. Yerinde kurulum seçeneğinde tüm veriler kurumun kendi sunucusunda kalır.
+
+**Moodle'dan farkı nedir?**
+Teknik ekip gerekmez. AI içeriği dakikalar içinde üretir. Kullanıcı başına lisans yok. Oyunlaştırma ve kariyer yolu entegre gelir.
+
+**Kaç dakikada içerik hazırlanır?**
+Ortalama 2–5 dakika. Klasik yönteme kıyasla %80 daha hızlı.
+
+**Sertifika veriyor mu?**
+Evet. QR kodlu dijital sertifika — anında doğrulanabilir.
+
+**Fiyatlandırma nasıl?**
+Kurumsal fiyatlandırma — demo talebi ile belirlenir. https://karne.app/#contact

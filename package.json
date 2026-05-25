@@ -5,7 +5,9 @@
   "scripts": {
     "build-css": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
     "watch-css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "npm run build-css"
+    "build": "./build.sh",
+    "serve": "python3 -m http.server 8000",
+    "serve:build": "cd build && python3 -m http.server 8000"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.1",

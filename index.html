@@ -1,1188 +1,1627 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Karne | Yapay Zeka Destekli Modern Öğrenme Deneyimi Platformu</title>
     <meta
       name="description"
-      content="Karne - Professional e-learning platform for government officials, civil servants, and public sector professionals. Transform your organization's learning processes with our low-cost, easy-to-use platform."
+      content="Karne, yapay zeka ile dakikalar içinde eğitim içeriği üretmenizi sağlayan modern Öğrenme Deneyimi Platformu. PDF'den videoya, AI destekli kurs üretimi, oyunlaştırma, yetenek değerlendirme. Sınırsız kullanıcı."
     />
-    <meta
-      name="keywords"
-      content="e-learning, corporate training, government training, online learning, LMS"
-    />
-    <meta name="author" content="Karne" />
-    <meta name="theme-color" content="#ec4899" />
-    <meta name="robots" content="index, follow" />
-    <meta
-      property="og:title"
-      content="Karne - Professional E-Learning Platform"
-    />
-    <meta
-      property="og:description"
-      content="Professional e-learning platform for government officials, civil servants, and public sector professionals."
-    />
+    <meta name="keywords" content="learning experience platform, LXP, yapay zeka eğitim, AI destekli içerik üretimi, e-öğrenme, oyunlaştırma, yetenek değerlendirme, oryantasyon, karne, LMS, dijital eğitim platformu, kurumsal eğitim, Moodle alternatifi, 360Learning alternatifi, iSpring alternatifi, Türkiye LXP, kamu eğitim platformu, KVKK uyumlu eğitim platformu, on-premise LMS Türkiye, PDF video dönüştürme eğitim, AI kurs üretimi, sınırsız kullanıcı eğitim platformu, bakanlık eğitim platformu, yapay zeka LMS" />
+    <meta name="author" content="Karne — Milapasa" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="theme-color" content="#0d9488" />
+
+    <!-- Geo / Yerel SEO -->
+    <meta name="geo.region" content="TR-06" />
+    <meta name="geo.placename" content="Ankara, Türkiye" />
+    <meta name="geo.position" content="39.9334;32.8597" />
+    <meta name="ICBM" content="39.9334, 32.8597" />
+
     <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://karne.app/logos/karne-logo-optimized.svg"
-    />
+    <meta property="og:url" content="https://karne.app" />
+    <meta property="og:title" content="Karne | Yapay Zeka Destekli Modern Öğrenme Deneyimi Platformu" />
+    <meta property="og:description" content="PDF'den videoya, AI ile kurs üretimi, oyunlaştırma ve yetenek değerlendirme. Klasik LMS değil — yeni nesil Öğrenme Deneyimi Platformu. Sınırsız kullanıcı ve içerik." />
+    <meta property="og:image" content="https://karne.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Karne — Yapay Zeka Destekli Modern Öğrenme Deneyimi Platformu" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta property="og:site_name" content="Karne" />
+
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@karneapp" />
+    <meta name="twitter:creator" content="@karneapp" />
+    <meta name="twitter:title" content="Karne | Yapay Zeka Destekli Modern Öğrenme Deneyimi Platformu" />
+    <meta name="twitter:description" content="PDF'den videoya, AI ile kurs üretimi, oyunlaştırma ve yetenek değerlendirme. Sınırsız kullanıcı ve içerik." />
+    <meta name="twitter:image" content="https://karne.app/og-image.png" />
+    <meta name="twitter:image:alt" content="Karne — Yapay Zeka Destekli Modern Öğrenme Deneyimi Platformu" />
+
     <link rel="canonical" href="https://karne.app" />
-    <title>Karne - Professional E-Learning Platform</title>
-    <!-- Tailwind CSS - Production Build -->
-    <link rel="stylesheet" href="./dist/output.css" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link rel="alternate" hreflang="tr" href="https://karne.app" />
+    <link rel="alternate" hreflang="en" href="https://karne.app?lang=en" />
+    <link rel="alternate" hreflang="de" href="https://karne.app?lang=de" />
+    <link rel="alternate" hreflang="fr" href="https://karne.app?lang=fr" />
+    <link rel="alternate" hreflang="x-default" href="https://karne.app" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/logos/karne-logo-optimized.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Site Summary" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://karne.app/#organization",
+          "name": "Karne",
+          "url": "https://karne.app",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://karne.app/logos/karne-logo-optimized.svg",
+            "width": 200,
+            "height": 60
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "info@milapasa.com",
+            "telephone": "+90-535-104-94-35",
+            "contactType": "customer service",
+            "areaServed": "TR",
+            "availableLanguage": ["Turkish", "English", "German", "French"]
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Söğütözü Cd. No: 2, Koç Kuleleri C Blok 17",
+            "addressLocality": "Çankaya",
+            "addressRegion": "Ankara",
+            "postalCode": "06510",
+            "addressCountry": "TR"
+          },
+          "foundingLocation": {
+            "@type": "Place",
+            "name": "Ankara, Türkiye"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://karne.app/#software",
+          "name": "Karne Öğrenme Deneyimi Platformu",
+          "applicationCategory": "EducationalApplication",
+          "operatingSystem": "Web, iOS, Android",
+          "description": "Yapay zeka destekli modern Öğrenme Deneyimi Platformu. PDF'den videoya dönüşüm, AI destekli kurs üretimi, oyunlaştırma, yetenek değerlendirme, kariyer yolu. Sınırsız kullanıcı ve içerik.",
+          "url": "https://karne.app",
+          "provider": { "@id": "https://karne.app/#organization" },
+          "offers": {
+            "@type": "Offer",
+            "description": "Demo için iletişime geçin",
+            "url": "https://karne.app/#contact",
+            "priceCurrency": "TRY",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "description": "Kurumsal fiyatlandırma — demo talebi ile alınır"
+            }
+          },
+          "featureList": [
+            "AI destekli içerik üretimi",
+            "PDF'den videoya dönüşüm",
+            "Oyunlaştırma",
+            "Yetenek değerlendirme",
+            "Kariyer yolu",
+            "Oryantasyon süreçleri",
+            "Anlık bilgilendirme",
+            "Detaylı raporlama",
+            "Sınırsız kullanıcı",
+            "Yerinde kurulum ve bulut seçeneği",
+            "KVKK uyumlu"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://karne.app/#website",
+          "url": "https://karne.app",
+          "name": "Karne",
+          "description": "Yapay Zeka Destekli Modern Öğrenme Deneyimi Platformu",
+          "publisher": { "@id": "https://karne.app/#organization" },
+          "inLanguage": ["tr", "en", "de", "fr"],
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://karne.app/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://karne.app/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Karne nedir ve kimler için uygundur?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Karne, yapay zeka destekli modern bir Öğrenme Deneyimi Platformu'dur (LXP). Özel sektör ve kamu — her tür kurum ve kuruluş için uygundur. İçeriklerini kolayca hazırlayıp kullanıma açmak isteyen herkes Karne'yi teknik bilgiye ihtiyaç duymadan kullanabilir."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Karne ile yapay zeka kullanarak nasıl eğitim içeriği üretebilirim?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Karne'de üç farklı AI içerik üretim yöntemi vardır: (1) PDF, Word veya PowerPoint dosyanızı yükleyin — AI otomatik kurs yapısı, özetler ve test soruları oluşturur. (2) Eğitim konunuzu yazın — AI önce taslak çıkarır, ardından tam içeriği hazırlar. (3) PDF belgelerinizi AI seslendirmesiyle eğitim videolarına dönüştürün."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Kullanıcı ve içerik sınırı var mı?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hayır. Karne'de kullanıcı ve eğitim içeriği sınırı yoktur. 5 kişi de kullansa, 50.000 kişi de kullansa fiyat değişmez. İçerik sayısı artsa da ek maliyet oluşmaz."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Karne'yi kendi sunucularımıza kurabilir miyiz?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Evet. Karne iki farklı dağıtım seçeneği sunar: Yerinde kurulum (platform kurumunuzun kendi sunucularına kurulur, tüm veriler sizde kalır) ve Bulut seçeneği (karne.app üzerinde kurumunuza özel alan, 1-2 günde canlıya alınır)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Karne klasik LMS'den ne farkı var?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Klasik LMS'ler statik içerik yönetimi sunar ve teknik ekip gerektirir. Karne ise AI destekli içerik üretimi, oyunlaştırma, yetenek değerlendirme, kariyer yolu ve oryantasyon gibi özelliklerle tam bir öğrenme deneyimi platformudur. Teknik bilgisi olmayan herkes yönetebilir, kullanıcı sınırı yoktur ve büyüdükçe maliyet artmaz."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Karne KVKK uyumlu mu?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Evet. Karne KVKK (Kişisel Verilerin Korunması Kanunu) ile tam uyumludur. Yerinde kurulum seçeneğinde tüm veriler kurumunuzun kendi altyapısında tutulur."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Karne, Moodle veya diğer LMS'lere göre ne avantaj sağlar?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Geleneksel LMS'ler kurulum, bakım ve içerik üretimi için teknik ekip gerektirir. Karne'de teknik bilgi gerekmez; yapay zeka içeriği sizin için dakikalar içinde üretir. Kullanıcı başına lisans yoktur — büyüdükçe maliyet artmaz. Oyunlaştırma, yetenek değerlendirme ve kariyer yolu gibi özellikler kutudan çıkar; ek modül veya eklenti gerekmez."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Kaç dakikada eğitim içeriği hazırlanabilir?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Karne ile mevcut bir PDF veya PowerPoint belgesini yükledikten sonra yapay zeka kurs bölümleri, ders özetleri ve test sorularını ortalama 2–5 dakika içinde oluşturur. Bu, içerik üretim hızını klasik yönteme kıyasla yaklaşık %80 artırır."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Karne sertifika veriyor mu?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Evet. Karne, eğitimi tamamlayan katılımcılara otomatik olarak dijital sertifika üretir. Sertifikalar QR kod içerir; herhangi biri QR kodu okutarak sertifikanın gerçekliğini anında doğrulayabilir. Kurumunuzun logosu ve markasıyla özelleştirilebilir."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://karne.app/#localbusiness",
+          "name": "Karne — Milapasa",
+          "url": "https://karne.app",
+          "email": "info@milapasa.com",
+          "telephone": "+90-535-104-94-35",
+          "image": "https://karne.app/logos/karne-logo-optimized.svg",
+          "priceRange": "₺₺₺",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Söğütözü Cd. No: 2, Koç Kuleleri C Blok 17",
+            "addressLocality": "Çankaya",
+            "addressRegion": "Ankara",
+            "postalCode": "06510",
+            "addressCountry": "TR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "39.9334",
+            "longitude": "32.8597"
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/karneapp",
+            "https://twitter.com/karneapp"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://karne.app/#webpage",
+          "url": "https://karne.app",
+          "name": "Karne | Yapay Zeka Destekli Modern Öğrenme Deneyimi Platformu",
+          "description": "Karne, yapay zeka ile dakikalar içinde eğitim içeriği üretmenizi sağlayan modern Öğrenme Deneyimi Platformu.",
+          "isPartOf": { "@id": "https://karne.app/#website" },
+          "about": { "@id": "https://karne.app/#organization" },
+          "inLanguage": "tr",
+          "datePublished": "2024-01-01",
+          "dateModified": "2026-05-24",
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["#hero-heading", ".hero-subtitle", "#ai-content-heading", "#features-heading"]
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Ana Sayfa",
+                "item": "https://karne.app"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "HowTo",
+          "@id": "https://karne.app/#howto-ai-content",
+          "name": "Yapay Zeka ile Dakikalar İçinde Eğitim İçeriği Nasıl Üretilir?",
+          "description": "Karne'nin yapay zeka motoru ile PDF, Word veya PowerPoint belgelerinizden profesyonel eğitim içeriği oluşturma adımları.",
+          "totalTime": "PT5M",
+          "tool": [
+            { "@type": "HowToTool", "name": "Karne LXP Platformu" },
+            { "@type": "HowToTool", "name": "PDF, Word veya PowerPoint belgesi" }
+          ],
+          "step": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "Belgenizi Yükleyin",
+              "text": "PDF, Word (.docx) veya PowerPoint (.pptx) belgenizi Karne'nin içerik yöneticisine sürükle-bırak ile yükleyin.",
+              "url": "https://karne.app/#ai-content"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "AI Kurs Yapısını Oluşturur",
+              "text": "Yapay zeka belgenizi analiz eder; otomatik olarak kurs bölümleri, ders özetleri, öğrenme hedefleri ve test soruları oluşturur.",
+              "url": "https://karne.app/#ai-content"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "İnceleyin ve Düzenleyin",
+              "text": "Oluşturulan kurs taslağını gözden geçirin, bölümleri onaylayın veya düzenleyin. Teknik bilgiye gerek yoktur.",
+              "url": "https://karne.app/#ai-content"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 4,
+              "name": "Yayınlayın ve Paylaşın",
+              "text": "Onaylanan içeriği tek tıkla yayına alın. Sınırsız kullanıcı, ek maliyet olmadan tüm çalışanlarınızla paylaşın.",
+              "url": "https://karne.app/#contact"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Resource hints — external CDNs -->
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://challenges.cloudflare.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+    <!-- Critical CSS preload -->
+    <link rel="preload" href="./dist/output.css" as="style" />
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css" />
+
     <style>
-      /* Logo optimization - fit content only */
-      #navbar-logo {
-        display: block;
-        height: 100%;
-        width: auto;
-        object-fit: contain;
-        object-position: center;
-        max-width: 150px;
+      #navbar-logo { display: block; height: 100%; width: auto; object-fit: contain; object-position: center; max-width: 150px; }
+
+      /* ── Mega Menu ─────────────────────────────────────────── */
+      .mega-trigger-btn {
+        display: flex; align-items: center; gap: 4px;
+        font-size: 0.875rem; font-weight: 500;
+        color: #374151; cursor: pointer; background: none; border: none;
+        padding: 0; transition: color 0.2s;
       }
+      .mega-trigger-btn:hover, .mega-trigger-btn.is-active { color: #2563eb; }
+      .mega-trigger-btn .chevron {
+        width: 14px; height: 14px; transition: transform 0.2s ease; color: #9CA3AF;
+      }
+      .mega-trigger-btn.is-active .chevron { transform: rotate(180deg); color: #2563eb; }
+
+      .mega-panel {
+        position: fixed; top: 64px; left: 0; right: 0;
+        background: #fff;
+        border-bottom: 1px solid #E5E7EB;
+        box-shadow: 0 24px 60px rgba(0,0,0,0.11);
+        opacity: 0; visibility: hidden; transform: translateY(-8px);
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+        z-index: 49;
+      }
+      .mega-panel.is-open { opacity: 1; visibility: visible; transform: translateY(0); }
+
+      .mega-panel-inner {
+        max-width: 76rem; margin: 0 auto;
+        padding: 28px 2rem 22px;
+      }
+      /* Two-column layout: cards + sidebar */
+      .mega-body {
+        display: grid;
+        grid-template-columns: 1fr 240px;
+        gap: 36px;
+        align-items: start;
+      }
+      /* Section label (like "CHOOSE YOUR INDUSTRY") */
+      .mega-section-label {
+        display: flex; align-items: center; gap: 10px;
+        font-size: 10px; font-weight: 800; letter-spacing: .12em;
+        color: #6D28D9; text-transform: uppercase; margin-bottom: 14px;
+      }
+      .mega-section-label::after {
+        content: ''; flex: 1; height: 1px; background: #E5E7EB;
+      }
+      /* 2-column cards grid */
+      .mega-cards-grid {
+        display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;
+      }
+      /* Individual card */
+      .mega-card {
+        display: block; padding: 16px 18px;
+        border: 1px solid #E5E7EB; border-radius: 12px;
+        text-decoration: none;
+        transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+      }
+      .mega-card:hover {
+        border-color: #C4B5FD; background: #FAFAF9;
+        box-shadow: 0 4px 18px rgba(109,40,217,0.08);
+      }
+      .mega-card-top {
+        display: flex; justify-content: space-between; align-items: flex-start;
+        margin-bottom: 5px;
+      }
+      .mega-card-title {
+        font-size: 13.5px; font-weight: 700; color: #111827;
+        transition: color 0.15s; line-height: 1.3;
+      }
+      .mega-card:hover .mega-card-title { color: #6D28D9; }
+      /* Icon box inside card (top-right) */
+      .mega-card-icon-box {
+        width: 34px; height: 34px; border-radius: 8px;
+        display: flex; align-items: center; justify-content: center;
+        flex-shrink: 0; margin-left: 10px;
+      }
+      .mega-card-icon-box i { font-size: 14px; }
+      .mega-card-desc { font-size: 12px; color: #6B7280; line-height: 1.55; }
+
+      /* Sidebar */
+      .mega-sidebar-label {
+        font-size: 10px; font-weight: 800; letter-spacing: .12em;
+        color: #059669; text-transform: uppercase; margin-bottom: 10px;
+      }
+      .mega-sidebar-list { list-style: none; padding: 0; margin: 0; }
+      .mega-sidebar-item {
+        display: flex; align-items: center; gap: 9px;
+        padding: 7px 6px; border-radius: 7px;
+        font-size: 12.5px; font-weight: 600; color: #111827;
+        transition: background 0.12s, color 0.12s; cursor: default;
+      }
+      .mega-sidebar-item:hover { background: #F5F3FF; color: #6D28D9; }
+      #featPanel .mega-sidebar-item:hover { background: #EFF6FF; color: #2563EB; }
+      #featPanel .mega-section-label::after { background: #DBEAFE; }
+      #featPanel .mega-card:hover { border-color: #BFDBFE; background: #F8FAFF; box-shadow: 0 4px 18px rgba(37,99,235,0.08); }
+      #featPanel .mega-card:hover .mega-card-title { color: #2563EB; }
+      /* Filled circle dot with white icon inside */
+      .mega-sidebar-dot {
+        width: 28px; height: 28px; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        flex-shrink: 0;
+      }
+      .mega-sidebar-dot i { font-size: 11px; color: #fff; }
+      /* Bottom CTA bar */
+      .mega-cta-bar {
+        display: flex; align-items: center; justify-content: center; gap: 6px;
+        background: #0F172A; color: #fff; border-radius: 10px;
+        padding: 11px 20px; font-size: 13px; font-weight: 600;
+        text-decoration: none; margin-top: 14px;
+        transition: background 0.15s;
+      }
+      .mega-cta-bar:hover { background: #1E3A5F; color: #fff; }
+
+      .mega-overlay {
+        position: fixed; inset: 0; background: rgba(0,0,0,0.03);
+        z-index: 48; display: none;
+      }
+      .mega-overlay.is-open { display: block; }
+      /* ─────────────────────────────────────────────────────── */
+
+      @keyframes gradient-shift {
+        0%   { background-position: 0% 50%; }
+        50%  { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .animate-gradient-text {
+        background: linear-gradient(90deg, #f59e0b, #ef4444, #f97316, #f59e0b);
+        background-size: 300% 300%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: gradient-shift 3s ease infinite;
+      }
+      .stat-card-amber {
+        background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        flex: 1;
+      }
+      .stat-card-orange {
+        background: linear-gradient(135deg, #fb923c 0%, #dc2626 100%);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        flex: 1;
+      }
+      .stat-card-amber .stat-num,
+      .stat-card-orange .stat-num { color: #fff; font-size: 3.5rem; font-weight: 800; line-height: 1; margin-bottom: 0.5rem; }
+      .stat-card-amber .stat-label,
+      .stat-card-orange .stat-label { color: #fff; font-size: 1rem; font-weight: 600; }
+      .stat-card-amber .stat-sub { color: #fde68a; font-size: 0.875rem; margin-top: 0.25rem; }
+      .stat-card-orange .stat-sub { color: #fed7aa; font-size: 0.875rem; margin-top: 0.25rem; }
     </style>
   </head>
+
   <body>
-    <!-- Navigation -->
-    <nav
-      id="navbar"
-      class="fixed top-0 w-full z-50 font-inter transition-all duration-300"
-      style="background: transparent"
-    >
+    <nav id="navbar" aria-label="Ana navigasyon" class="fixed top-0 w-full z-50 font-inter transition-all duration-300" style="background: transparent">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
-          <div class="flex items-center">
-            <div class="h-10 flex items-center">
-              <img
-                src="logos/karne-logo-optimized.svg"
-                alt="Karne"
-                class="h-full w-auto object-contain invert"
-                id="navbar-logo"
-              />
+          <div class="flex items-center gap-8">
+            <div class="h-10 flex items-center flex-shrink-0">
+              <img src="logos/karne-logo-optimized.svg" alt="Karne Logo" class="h-full w-auto object-contain" id="navbar-logo" width="120" height="40" />
             </div>
-          </div>
-          <div class="hidden md:flex items-center space-x-8">
-            <a
-              href="#home"
-              class="text-slate-300 hover:text-pink-300 transition-colors duration-300 font-medium"
-              data-translate="nav.home"
-              >Home</a
-            >
-            <a
-              href="#about"
-              class="text-slate-300 hover:text-pink-300 transition-colors duration-300 font-medium"
-              data-translate="nav.about"
-              >About</a
-            >
-            <a
-              href="#references"
-              class="text-slate-300 hover:text-pink-300 transition-colors duration-300 font-medium"
-              data-translate="nav.references"
-              >References</a
-            >
-            <a
-              href="#contact"
-              class="text-slate-300 hover:text-pink-300 transition-colors duration-300 font-medium"
-              data-translate="nav.contact"
-              >Contact</a
-            >
-          </div>
-          <div class="flex items-center space-x-4">
-            <!-- Login Button -->
-            <a
-              href="https://my.karne.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hidden md:flex items-center justify-center px-6 py-2 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-pink-500/40 border border-pink-400/30 hover:border-pink-300/50"
-              data-translate="nav.login"
-            >
-              Login
-            </a>
-            <!-- Language Selector -->
-            <div class="relative group">
-              <button
-                id="langBtn"
-                class="flex items-center space-x-2 bg-slate-800/50 hover:bg-slate-700/50 px-3 py-2 rounded-lg transition-colors duration-200 border border-slate-600/50"
-              >
-                <span id="currentLangFlag" class="text-lg">🇬🇧</span>
-                <span id="currentLang" class="font-semibold text-slate-300"
-                  >EN</span
-                >
-                <svg
-                  class="w-4 h-4 text-slate-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"
-                  ></path>
+            <div class="hidden md:flex items-center space-x-5">
+              <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium text-sm" data-translate="nav.home">Ana Sayfa</a>
+              <button class="mega-trigger-btn" id="featTrigger" aria-expanded="false" aria-controls="featPanel">
+                Özellikler
+                <svg class="chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
                 </svg>
               </button>
-              <div
-                id="langMenu"
-                class="absolute right-0 mt-2 w-28 bg-slate-800 rounded-lg shadow-lg border border-slate-600 opacity-0 invisible transform translate-y-2 transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0"
-              >
-                <div
-                  class="lang-option flex items-center justify-center gap-2 py-2 px-3 cursor-pointer hover:bg-slate-700 font-semibold text-slate-300"
-                  data-lang="en"
-                >
-                  <span class="text-lg">🇬🇧</span>
-                  <span>EN</span>
-                </div>
-                <div
-                  class="lang-option flex items-center justify-center gap-2 py-2 px-3 cursor-pointer hover:bg-slate-700 font-semibold text-slate-300"
-                  data-lang="tr"
-                >
-                  <span class="text-lg">🇹🇷</span>
-                  <span>TR</span>
-                </div>
-                <div
-                  class="lang-option flex items-center justify-center gap-2 py-2 px-3 cursor-pointer hover:bg-slate-700 font-semibold text-slate-300"
-                  data-lang="de"
-                >
-                  <span class="text-lg">🇩🇪</span>
-                  <span>DE</span>
-                </div>
-                <div
-                  class="lang-option flex items-center justify-center gap-2 py-2 px-3 cursor-pointer hover:bg-slate-700 font-semibold text-slate-300"
-                  data-lang="fr"
-                >
-                  <span class="text-lg">🇫🇷</span>
-                  <span>FR</span>
-                </div>
+              <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium text-sm" data-translate="nav.contact">İletişim</a>
+              <button class="mega-trigger-btn" id="megaTrigger" aria-expanded="false" aria-controls="megaPanel">
+                Kullanım Alanları
+                <svg class="chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <a href="#contact" class="hidden md:inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 text-sm">
+              <i class="fas fa-calendar-check" aria-hidden="true"></i> <span data-translate="nav.demo">Demo İste</span>
+            </a>
+            <a href="https://my.karne.app/register" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold rounded-lg border border-gray-200 transition-all duration-300 hover:scale-105 text-sm">
+              <i class="fas fa-user-plus" aria-hidden="true"></i> <span data-translate="nav.register">Üye Ol</span>
+            </a>
+            <a href="https://my.karne.app" target="_blank" rel="noopener noreferrer"
+               class="hidden md:inline-flex items-center justify-center px-4 py-2 text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300 text-sm"
+               data-translate="nav.login">Giriş</a>
+            <div class="relative group">
+              <button id="langBtn" class="inline-flex items-center gap-1.5 bg-white/70 hover:bg-white/90 px-3 rounded-lg transition-all duration-200 border border-gray-200/80 shadow-sm" style="height:36px">
+                <span id="currentLangFlag" style="width:1.3em;height:1em;display:inline-block;"></span>
+                <span id="currentLang" class="text-sm font-medium text-gray-700 tracking-wide">TR</span>
+                <svg class="w-3 h-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </button>
+              <div id="langMenu" class="absolute right-0 mt-1.5 w-24 bg-white rounded-xl shadow-lg border border-gray-100 opacity-0 invisible transform translate-y-1 transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 overflow-hidden">
+                <div class="lang-option flex items-center gap-2 py-2 px-3 cursor-pointer hover:bg-blue-50 hover:text-blue-600 transition-all duration-150 group/item" data-lang="tr"><span class="lang-flag" style="width:1.2em;height:0.9em;display:inline-block;"></span><span class="text-xs font-medium text-gray-700 group-hover/item:text-blue-600 transition-colors">TR</span></div>
+                <div class="lang-option flex items-center gap-2 py-2 px-3 cursor-pointer hover:bg-blue-50 hover:text-blue-600 transition-all duration-150 group/item" data-lang="en"><span class="lang-flag" style="width:1.2em;height:0.9em;display:inline-block;"></span><span class="text-xs font-medium text-gray-700 group-hover/item:text-blue-600 transition-colors">EN</span></div>
+                <div class="lang-option flex items-center gap-2 py-2 px-3 cursor-pointer hover:bg-blue-50 hover:text-blue-600 transition-all duration-150 group/item" data-lang="de"><span class="lang-flag" style="width:1.2em;height:0.9em;display:inline-block;"></span><span class="text-xs font-medium text-gray-700 group-hover/item:text-blue-600 transition-colors">DE</span></div>
+                <div class="lang-option flex items-center gap-2 py-2 px-3 cursor-pointer hover:bg-blue-50 hover:text-blue-600 transition-all duration-150 group/item" data-lang="fr"><span class="lang-flag" style="width:1.2em;height:0.9em;display:inline-block;"></span><span class="text-xs font-medium text-gray-700 group-hover/item:text-blue-600 transition-colors">FR</span></div>
               </div>
             </div>
-            <!-- Mobile menu button -->
-            <button
-              id="mobileMenuBtn"
-              class="md:hidden relative w-10 h-10 flex items-center justify-center text-slate-300 hover:text-pink-300 transition-colors duration-300 z-50"
-              aria-label="Toggle menu"
-            >
+            <button id="mobileMenuBtn" class="md:hidden relative w-10 h-10 flex items-center justify-center text-gray-700 hover:text-blue-600 transition-colors duration-300 z-50" aria-label="Menüyü aç/kapat">
               <div class="relative w-6 h-5 flex flex-col justify-between">
-                <span
-                  class="hamburger-line block w-full h-0.5 bg-current transition-all duration-300"
-                ></span>
-                <span
-                  class="hamburger-line block w-full h-0.5 bg-current transition-all duration-300"
-                ></span>
-                <span
-                  class="hamburger-line block w-full h-0.5 bg-current transition-all duration-300"
-                ></span>
+                <span class="hamburger-line block w-full h-0.5 bg-current transition-all duration-300"></span>
+                <span class="hamburger-line block w-full h-0.5 bg-current transition-all duration-300"></span>
+                <span class="hamburger-line block w-full h-0.5 bg-current transition-all duration-300"></span>
               </div>
-            </button>
-          </div>
-        </div>
-      </div>
-      <!-- Mobile menu -->
-      <div
-        id="mobileMenu"
-        class="fixed inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 translate-x-full transition-transform duration-300 ease-in-out md:hidden"
-        style="z-index: 9998"
-      >
-        <!-- Close Button -->
-        <button
-          id="mobileMenuClose"
-          class="absolute top-6 right-6 w-12 h-12 flex items-center justify-center text-white hover:text-pink-400 transition-colors duration-300 z-10"
-          aria-label="Close menu"
-        >
-          <svg
-            class="w-8 h-8"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            ></path>
-          </svg>
-        </button>
-
-        <div
-          class="h-[100vh] bg-slate-950 flex flex-col items-center justify-center px-6 py-20"
-        >
-          <nav class="w-full max-w-md space-y-4 text-white">
-            <a
-              href="#home"
-              class="mobile-menu-link block py-4 px-6 text-3xl font-bold text-white hover:text-pink-400 transition-colors duration-300 text-center"
-              data-translate="nav.home"
-              >Home</a
-            >
-            <a
-              href="#about"
-              class="mobile-menu-link block py-4 px-6 text-3xl font-bold text-white hover:text-pink-400 transition-colors duration-300 text-center"
-              data-translate="nav.about"
-              >About</a
-            >
-            <a
-              href="#references"
-              class="mobile-menu-link block py-4 px-6 text-3xl font-bold text-white hover:text-pink-400 transition-colors duration-300 text-center"
-              data-translate="nav.references"
-              >References</a
-            >
-            <a
-              href="#contact"
-              class="mobile-menu-link block py-4 px-6 text-3xl font-bold text-white hover:text-pink-400 transition-colors duration-300 text-center"
-              data-translate="nav.contact"
-              >Contact</a
-            >
-            <!-- Mobile Login Button -->
-            <a
-              href="https://my.karne.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="mobile-menu-link block py-4 px-6 text-2xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white rounded-xl transition-all duration-300 transform hover:scale-105 text-center mx-auto max-w-xs"
-              data-translate="nav.login"
-            >
-              Login
-            </a>
-          </nav>
-
-          <!-- Language Selector in Mobile Menu -->
-          <div class="mt-12 grid grid-cols-2 gap-4 w-full max-w-xs">
-            <button
-              class="lang-option px-6 py-4 bg-white/10 hover:bg-white/20 rounded-lg text-white font-semibold transition-colors text-center"
-              data-lang="en"
-            >
-              🇬🇧 EN
-            </button>
-            <button
-              class="lang-option px-6 py-4 bg-white/10 hover:bg-white/20 rounded-lg text-white font-semibold transition-colors text-center"
-              data-lang="tr"
-            >
-              🇹🇷 TR
-            </button>
-            <button
-              class="lang-option px-6 py-4 bg-white/10 hover:bg-white/20 rounded-lg text-white font-semibold transition-colors text-center"
-              data-lang="de"
-            >
-              🇩🇪 DE
-            </button>
-            <button
-              class="lang-option px-6 py-4 bg-white/10 hover:bg-white/20 rounded-lg text-white font-semibold transition-colors text-center"
-              data-lang="fr"
-            >
-              🇫🇷 FR
             </button>
           </div>
         </div>
       </div>
     </nav>
+    <div class="mega-overlay" id="megaOverlay"></div>
+    <div class="mega-panel" id="megaPanel" role="region" aria-label="Kullanım Alanları">
+      <div class="mega-panel-inner">
+        <div class="mega-body">
+          <div>
+            <div class="mega-section-label">Kullanım Alanı Seçin</div>
+            <div class="mega-cards-grid">
+              <a href="use-cases/oryantasyon.html" class="mega-card">
+                <div class="mega-card-top">
+                  <div class="mega-card-title">Oryantasyon & İşe Alım</div>
+                  <div class="mega-card-icon-box" style="background:#EDE9FE;"><i class="fas fa-user-check" style="color:#7C3AED;"></i></div>
+                </div>
+                <div class="mega-card-desc">Yeni çalışanları ilk günden kültüre entegre edin, tamamlanma oranlarını takip edin.</div>
+              </a>
+              <a href="use-cases/stk-sivil-toplum.html" class="mega-card">
+                <div class="mega-card-top">
+                  <div class="mega-card-title">STK & Sivil Toplum</div>
+                  <div class="mega-card-icon-box" style="background:#EDE9FE;"><i class="fas fa-handshake-angle" style="color:#7C3AED;"></i></div>
+                </div>
+                <div class="mega-card-desc">Gönüllülerinizi hızla yetiştirin, saha ekiplerinizi uzaktan eğitin, paydaşlara etki kanıtlayın.</div>
+              </a>
+              <a href="use-cases/liderlik.html" class="mega-card">
+                <div class="mega-card-top">
+                  <div class="mega-card-title">Liderlik Geliştirme</div>
+                  <div class="mega-card-icon-box" style="background:#EDE9FE;"><i class="fas fa-crown" style="color:#7C3AED;"></i></div>
+                </div>
+                <div class="mega-card-desc">Yöneticiler için 360° değerlendirme ve kişiselleştirilmiş gelişim yolları oluşturun.</div>
+              </a>
+              <a href="use-cases/satis-ekipleri.html" class="mega-card">
+                <div class="mega-card-top">
+                  <div class="mega-card-title">Satış Ekipleri</div>
+                  <div class="mega-card-icon-box" style="background:#EDE9FE;"><i class="fas fa-arrow-trend-up" style="color:#7C3AED;"></i></div>
+                </div>
+                <div class="mega-card-desc">Ürün bilgisi ve müzakere becerilerini gamification ile sürekli pekiştirin.</div>
+              </a>
+              <a href="use-cases/kamu-kurumlari.html" class="mega-card">
+                <div class="mega-card-top">
+                  <div class="mega-card-title">Kamu Kurumları</div>
+                  <div class="mega-card-icon-box" style="background:#EDE9FE;"><i class="fas fa-landmark" style="color:#7C3AED;"></i></div>
+                </div>
+                <div class="mega-card-desc">On-premise kurulum, sınırsız kullanıcı ve merkezi raporlama ile kamu ihtiyaçlarına uygun.</div>
+              </a>
+              <a href="use-cases/teknik-egitimler.html" class="mega-card">
+                <div class="mega-card-top">
+                  <div class="mega-card-title">Teknik Eğitimler</div>
+                  <div class="mega-card-icon-box" style="background:#EDE9FE;"><i class="fas fa-microchip" style="color:#7C3AED;"></i></div>
+                </div>
+                <div class="mega-card-desc">Yazılım, mühendislik ve IT ekipleri için yetkinlik haritaları ve skill gap analizi.</div>
+              </a>
+            </div>
+            <a href="#contact" class="mega-cta-bar" id="megaContactLink">
+              Sektörünüze özel demo isteyin &nbsp;→
+            </a>
+          </div>
+          <div>
+            <div class="mega-sidebar-label">Platform Katkıları</div>
+            <ul class="mega-sidebar-list">
+              <li class="mega-sidebar-item"><div class="mega-sidebar-dot" style="background:#7C3AED;"><i class="fas fa-bullseye"></i></div>Hedefli öğrenme deneyimi</li>
+              <li class="mega-sidebar-item"><div class="mega-sidebar-dot" style="background:#7C3AED;"><i class="fas fa-chart-line"></i></div>Tamamlanma oranını artırır</li>
+              <li class="mega-sidebar-item"><div class="mega-sidebar-dot" style="background:#7C3AED;"><i class="fas fa-bolt"></i></div>Uyum süreçlerini otomatikleştirir</li>
+              <li class="mega-sidebar-item"><div class="mega-sidebar-dot" style="background:#7C3AED;"><i class="fas fa-puzzle-piece"></i></div>Yetkinlik açıklarını kapatır</li>
+              <li class="mega-sidebar-item"><div class="mega-sidebar-dot" style="background:#7C3AED;"><i class="fas fa-route"></i></div>Kariyer yollarını görünür kılar</li>
+              <li class="mega-sidebar-item"><div class="mega-sidebar-dot" style="background:#7C3AED;"><i class="fas fa-clipboard-check"></i></div>Denetim hazırlığı sağlar</li>
+              <li class="mega-sidebar-item"><div class="mega-sidebar-dot" style="background:#7C3AED;"><i class="fas fa-lightbulb"></i></div>ROI'yi ölçülebilir kılar</li>
+              <li class="mega-sidebar-item"><div class="mega-sidebar-dot" style="background:#7C3AED;"><i class="fas fa-trophy"></i></div>Çalışan bağlılığını yükseltir</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mega-overlay" id="featOverlay"></div>
+    <div class="mega-panel" id="featPanel" role="region" aria-label="Özellikler">
+      <div class="mega-panel-inner">
+        <div class="mega-body">
+          <div>
+            <div class="mega-section-label" style="color:#2563EB;">Platform Özelliklerini Keşfedin</div>
+            <div class="mega-cards-grid">
+              <a href="features/oyunlastirma.html" class="mega-card" id="featAllLink">
+                <div class="mega-card-top">
+                  <div class="mega-card-title">Oyunlaştırma</div>
+                  <div class="mega-card-icon-box" style="background:#DBEAFE;"><i class="fas fa-trophy" style="color:#2563EB;"></i></div>
+                </div>
+                <div class="mega-card-desc">Puanlar, rozetler ve liderlik tablosuyla öğrenmeyi motive edici bir deneyime dönüştürün.</div>
+              </a>
+              <a href="features/yetkinlik-degerlendirme.html" class="mega-card">
+                <div class="mega-card-top">
+                  <div class="mega-card-title">Yetkinlik Değerlendirme</div>
+                  <div class="mega-card-icon-box" style="background:#DBEAFE;"><i class="fas fa-chart-bar" style="color:#2563EB;"></i></div>
+                </div>
+                <div class="mega-card-desc">Skill haritası, 360° geri bildirim ve gap analizi ile gelişim alanlarını netleştirin.</div>
+              </a>
+              <a href="features/ogrenme-yollari.html" class="mega-card">
+                <div class="mega-card-top">
+                  <div class="mega-card-title">Öğrenme Yolları</div>
+                  <div class="mega-card-icon-box" style="background:#DBEAFE;"><i class="fas fa-route" style="color:#2563EB;"></i></div>
+                </div>
+                <div class="mega-card-desc">Pozisyon bazlı, kişiselleştirilmiş öğrenme programları oluşturun ve ilerlemeyi takip edin.</div>
+              </a>
+              <a href="features/ai-icerik-uretimi.html" class="mega-card">
+                <div class="mega-card-top">
+                  <div class="mega-card-title">AI İçerik Üretimi</div>
+                  <div class="mega-card-icon-box" style="background:#DBEAFE;"><i class="fas fa-wand-magic-sparkles" style="color:#2563EB;"></i></div>
+                </div>
+                <div class="mega-card-desc">PDF veya Word belgelerinizden yapay zeka ile otomatik ders, quiz ve video senaryosu üretin.</div>
+              </a>
+              <a href="features/raporlama-analitik.html" class="mega-card">
+                <div class="mega-card-top">
+                  <div class="mega-card-title">Raporlama & Analitik</div>
+                  <div class="mega-card-icon-box" style="background:#DBEAFE;"><i class="fas fa-chart-pie" style="color:#2563EB;"></i></div>
+                </div>
+                <div class="mega-card-desc">Birey, ekip ve kurum bazında canlı dashboard'lar; denetim ve dışa aktarılabilir raporlar.</div>
+              </a>
+              <a href="features/entegrasyon-kurulum.html" class="mega-card">
+                <div class="mega-card-top">
+                  <div class="mega-card-title">Entegrasyon & Kurulum</div>
+                  <div class="mega-card-icon-box" style="background:#DBEAFE;"><i class="fas fa-plug" style="color:#2563EB;"></i></div>
+                </div>
+                <div class="mega-card-desc">SSO, LDAP, SCORM, on-premise veya bulut — kurumunuzun altyapısına tam uyum.</div>
+              </a>
+            </div>
+            <a href="#contact" class="mega-cta-bar" style="background:#1D4ED8;">
+              Tüm özellikleri canlı demo ile görün &nbsp;→
+            </a>
+          </div>
+          <div>
+            <div class="mega-sidebar-label" style="color:#2563EB;">Neden Karne?</div>
+            <ul class="mega-sidebar-list">
+              <li class="mega-sidebar-item"><div class="mega-sidebar-dot" style="background:#2563EB;"><i class="fas fa-infinity"></i></div>Sınırsız kullanıcı</li>
+              <li class="mega-sidebar-item"><div class="mega-sidebar-dot" style="background:#2563EB;"><i class="fas fa-server"></i></div>Cloud veya on-premise</li>
+              <li class="mega-sidebar-item"><div class="mega-sidebar-dot" style="background:#2563EB;"><i class="fas fa-globe"></i></div>4 dil desteği</li>
+              <li class="mega-sidebar-item"><div class="mega-sidebar-dot" style="background:#2563EB;"><i class="fas fa-mobile-screen"></i></div>Tam mobil uyumluluk</li>
+              <li class="mega-sidebar-item"><div class="mega-sidebar-dot" style="background:#2563EB;"><i class="fas fa-lock"></i></div>KVKK uyumlu</li>
+              <li class="mega-sidebar-item"><div class="mega-sidebar-dot" style="background:#2563EB;"><i class="fas fa-certificate"></i></div>Dijital sertifika</li>
+              <li class="mega-sidebar-item"><div class="mega-sidebar-dot" style="background:#2563EB;"><i class="fas fa-key"></i></div>SSO entegrasyonu</li>
+              <li class="mega-sidebar-item"><div class="mega-sidebar-dot" style="background:#2563EB;"><i class="fas fa-qrcode"></i></div>QR kod doğrulama</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main id="main-content">
+    <section id="home" aria-labelledby="hero-heading" class="relative bg-gradient-to-br from-blue-50 via-white to-emerald-50/60 text-gray-900 font-inter overflow-hidden pt-16 pb-20">
+      <div class="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-blue-300/40 via-teal-200/30 to-transparent rounded-full blur-3xl animate-float"></div>
+      <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-tl from-emerald-300/30 via-teal-200/20 to-transparent rounded-full blur-3xl animate-float" style="animation-delay:3s"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-blue-100/30 via-teal-100/20 to-emerald-100/30 rounded-full blur-3xl"></div>
 
-    <!-- Hero Section -->
-    <section
-      id="home"
-      class="relative min-h-screen bg-slate-950 text-white font-inter overflow-hidden flex items-center pt-12 md:pt-0"
-    >
-      <!-- Background Effects -->
-      <div
-        class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-pink-600/30 via-purple-600/20 to-transparent rounded-full blur-3xl animate-float"
-      ></div>
-      <div
-        class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-pink-400/10 via-purple-400/5 to-transparent rounded-full blur-3xl animate-pulse animate-float"
-        style="animation-delay: 1s"
-      ></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-8">
+        <div class="max-w-7xl mx-auto bg-white/70 backdrop-blur-sm rounded-3xl border border-white shadow-xl shadow-blue-100/50 animate-fade-in-up overflow-hidden" style="animation-duration:0.8s;animation-fill-mode:both">
+          <div class="flex flex-col lg:flex-row">
+            <div class="flex-[7] px-5 sm:px-10 lg:px-14 pt-10 sm:pt-12 lg:pt-14 pb-6 lg:pb-14 space-y-6 sm:space-y-8">
 
-      <div
-        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16"
-      >
+              <div class="flex items-center gap-3 animate-fade-in-up" style="animation-delay:0.1s;animation-fill-mode:both">
+                <div class="w-8 h-0.5 bg-gradient-to-r from-transparent to-blue-400 rounded-full"></div>
+                <p class="text-xs sm:text-sm font-semibold tracking-widest text-gray-600 uppercase" data-translate="hero.badge">Yeni Nesil Öğrenme Deneyimi</p>
+                <div class="w-8 h-0.5 bg-gradient-to-l from-transparent to-teal-400 rounded-full"></div>
+              </div>
+
+              <h1 id="hero-heading" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900 animate-fade-in-up" style="animation-delay:0.2s;animation-fill-mode:both" data-translate="hero.title">
+                Öğrenme Deneyimini<br />
+                <span class="bg-gradient-to-r from-blue-600 via-teal-600 to-emerald-600 bg-clip-text text-transparent">Yapay Zeka ile Yeniden Tanımlıyoruz</span>
+              </h1>
+
+            </div>
+            <div class="flex-[3] flex flex-col justify-center items-stretch px-5 sm:px-10 lg:px-8 gap-3 pb-6 lg:pb-0 lg:pr-14 animate-fade-in-up" style="animation-delay:0.6s;animation-fill-mode:both">
+              <a href="#contact" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:py-4 bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg shadow-blue-200 text-sm sm:text-base" data-translate="hero.cta_primary">Ücretsiz Demo İste</a>
+              <a href="#ai-content" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:py-4 bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold rounded-xl border border-gray-200 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base" data-translate="hero.cta_secondary">AI Özelliklerini Keşfet</a>
+            </div>
+
+          </div>
+          <div class="px-5 sm:px-10 lg:px-14 pb-6 animate-fade-in-up" style="animation-delay:0.4s;animation-fill-mode:both">
+            <p class="hero-subtitle text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed" data-translate="hero.subtitle">
+              PDF, Word veya sunumlarınızı yükleyin; yapay zeka dakikalar içinde kursunuzu, quizinizi ve eğitim videolarınızı hazırlasın. Klasik LMS değil — kurumunuza özel, sınırsız kullanıcılı öğrenme deneyimi platformu.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-x-6 gap-y-3 px-5 sm:px-10 lg:px-14 pb-8 sm:pb-10 animate-fade-in-up border-t border-gray-100 pt-6" style="animation-delay:0.8s;animation-fill-mode:both">
+            <div class="flex items-center gap-2 text-gray-500 text-sm"><i class="fas fa-infinity text-blue-500" aria-hidden="true"></i><span data-translate="hero.trust1">Sınırsız kullanıcı ve içerik</span></div>
+            <div class="flex items-center gap-2 text-gray-500 text-sm"><i class="fas fa-bolt text-amber-500" aria-hidden="true"></i><span data-translate="hero.trust2">1-2 günde canlıya alın</span></div>
+            <div class="flex items-center gap-2 text-gray-500 text-sm"><i class="fas fa-server text-emerald-500" aria-hidden="true"></i><span data-translate="hero.trust3">Yerinde kurulum veya Bulut</span></div>
+            <div class="flex items-center gap-2 text-gray-500 text-sm"><i class="fas fa-wand-magic-sparkles text-violet-500" aria-hidden="true"></i><span data-translate="hero.trust4">Teknik bilgi gerektirmez</span></div>
+            <div class="flex items-center gap-2 text-gray-500 text-sm"><i class="fas fa-clock text-blue-500" aria-hidden="true"></i><span data-translate="hero.trust5">30 gün ücretsiz deneme</span></div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <section aria-label="Karne platform istatistikleri" class="pt-16 pb-12 bg-white border-b border-gray-100 font-inter">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div class="space-y-1">
+            <div class="text-4xl sm:text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">%80</div>
+            <div class="text-sm font-semibold text-gray-800" data-translate="stats.s1_label">Daha Hızlı İçerik Üretimi</div>
+            <div class="text-xs text-gray-500" data-translate="stats.s1_sub">AI ile klasik yönteme kıyasla</div>
+          </div>
+          <div class="space-y-1">
+            <div class="text-4xl sm:text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent">%92</div>
+            <div class="text-sm font-semibold text-gray-800" data-translate="stats.s2_label">Eğitim Tamamlanma Oranı</div>
+            <div class="text-xs text-gray-500" data-translate="stats.s2_sub">Oyunlaştırma ile %45'ten %92'ye</div>
+          </div>
+          <div class="space-y-1">
+            <div class="text-4xl sm:text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">1-2</div>
+            <div class="text-sm font-semibold text-gray-800" data-translate="stats.s3_label">Günde Canlıya Alın</div>
+            <div class="text-xs text-gray-500" data-translate="stats.s3_sub">Kurulum veya bulut — hazır</div>
+          </div>
+          <div class="space-y-1">
+            <div class="text-4xl sm:text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">0 ₺</div>
+            <div class="text-sm font-semibold text-gray-800" data-translate="stats.s4_label">Kullanıcı Başına Ek Maliyet</div>
+            <div class="text-xs text-gray-500" data-translate="stats.s4_sub">50.000 kişi de, 5 kişi de — sabit fiyat</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section aria-labelledby="lms-comparison-heading" class="py-20 bg-white font-inter">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 id="lms-comparison-heading" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4" data-translate="lms.title">
+            Klasik LMS'leri <span class="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Geride Bırakın</span>
+          </h2>
+          <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto" data-translate="lms.subtitle">Karne, öğrenme yönetim sistemi değil — tam anlamıyla bir öğrenme deneyimi platformudur.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8 items-start">
+          <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 bg-gray-200 rounded-xl flex items-center justify-center">
+                <i class="fas fa-database text-gray-500" aria-hidden="true"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-600" data-translate="lms.classic_title">Klasik LMS</h3>
+            </div>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3 text-gray-600"><i class="fas fa-xmark text-red-400 mt-1" aria-hidden="true"></i><span data-translate="lms.classic1">Statik içerik yönetimi — içeriği kendin hazırlamak zorunda kalırsın</span></li>
+              <li class="flex items-start gap-3 text-gray-600"><i class="fas fa-xmark text-red-400 mt-1" aria-hidden="true"></i><span data-translate="lms.classic2">Teknik ekip gerektirir, IT bağımlılığı yüksektir</span></li>
+              <li class="flex items-start gap-3 text-gray-600"><i class="fas fa-xmark text-red-400 mt-1" aria-hidden="true"></i><span data-translate="lms.classic3">Kullanıcı ve içerik sınırı, ek lisans maliyeti</span></li>
+              <li class="flex items-start gap-3 text-gray-600"><i class="fas fa-xmark text-red-400 mt-1" aria-hidden="true"></i><span data-translate="lms.classic4">Sadece kurs tamamlama takibi — öğrenme deneyimi yok</span></li>
+              <li class="flex items-start gap-3 text-gray-600"><i class="fas fa-xmark text-red-400 mt-1" aria-hidden="true"></i><span data-translate="lms.classic5">Oyunlaştırma, yetenek ve kariyer gelişimi desteklenmez</span></li>
+              <li class="flex items-start gap-3 text-gray-600"><i class="fas fa-xmark text-red-400 mt-1" aria-hidden="true"></i><span data-translate="lms.classic6">Yerinde kurulum ya da bulut — ikisi birden değil</span></li>
+            </ul>
+          </div>
+          <div class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-8 border border-blue-500/20 shadow-xl">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-teal-600 rounded-xl flex items-center justify-center">
+                <i class="fas fa-rocket text-white" aria-hidden="true"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white" data-translate="lms.karne_title">Karne LXP</h3>
+            </div>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3 text-slate-200"><i class="fas fa-check text-emerald-400 mt-1" aria-hidden="true"></i><span data-translate="lms.karne1">Yapay zeka ile saniyeler içinde içerik üretimi — teknik bilgisiz</span></li>
+              <li class="flex items-start gap-3 text-slate-200"><i class="fas fa-check text-emerald-400 mt-1" aria-hidden="true"></i><span data-translate="lms.karne2">Teknik bilgisi olmayan herkes yönetebilir, IT bağımlılığı yok</span></li>
+              <li class="flex items-start gap-3 text-slate-200"><i class="fas fa-check text-emerald-400 mt-1" aria-hidden="true"></i><span data-translate="lms.karne3">Sınırsız kullanıcı ve içerik — büyüdükçe maliyet artmaz</span></li>
+              <li class="flex items-start gap-3 text-slate-200"><i class="fas fa-check text-emerald-400 mt-1" aria-hidden="true"></i><span data-translate="lms.karne4">Oyunlaştırma, yetenek değerlendirme ve kariyer yolu ile gerçek öğrenme deneyimi</span></li>
+              <li class="flex items-start gap-3 text-slate-200"><i class="fas fa-check text-emerald-400 mt-1" aria-hidden="true"></i><span data-translate="lms.karne5">Kariyer gelişimi, oryantasyon ve anlık bilgilendirme entegre</span></li>
+              <li class="flex items-start gap-3 text-slate-200"><i class="fas fa-check text-emerald-400 mt-1" aria-hidden="true"></i><span data-translate="lms.karne6">Yerinde kurulum veya karne.app bulutu — her ikisi de mümkün</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="ai-content" aria-labelledby="ai-content-heading" class="py-16 sm:py-20 lg:py-24 bg-slate-950 text-white font-inter">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span class="inline-block bg-blue-600/10 text-blue-400 text-sm font-semibold px-4 py-1.5 rounded-full mb-4 border border-blue-500/20" data-translate="ai.badge">
+            <i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i> Yapay Zeka Destekli
+          </span>
+          <h2 id="ai-content-heading" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6" data-translate="ai.title">
+            İçerik Üretmek Hiç Bu Kadar<br /><span class="text-teal-400">Kolay Olmamıştı</span>
+          </h2>
+          <p class="text-base sm:text-lg lg:text-xl text-slate-400 max-w-3xl mx-auto" data-translate="ai.subtitle">
+            Elinizdeki materyale göre kendinize uygun yolu seçin. Hangi başlangıç noktasında olursanız olun, sonunda yayına hazır bir eğitim çıkıyor.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+          <div class="bg-gradient-to-br from-blue-600/10 to-teal-600/5 rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 group">
+            <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-teal-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-file-arrow-up text-white text-2xl" aria-hidden="true"></i>
+            </div>
+            <p class="text-xs font-semibold uppercase tracking-wider text-blue-300 mb-2" data-translate="ai.m1_scenario">Hazır dökümanınız mı var?</p>
+            <h3 class="text-xl font-bold text-white mb-3" data-translate="ai.m1_title">Yükleyin, AI kurs yapsın</h3>
+            <p class="text-slate-400 leading-relaxed" data-translate="ai.m1_desc">PDF, Word veya PowerPoint dosyanızı bırakın. Yapay zeka bölümleri, özetleri, test sorularını ve öğrenme çıktılarını otomatik oluşturur.</p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="bg-blue-600/20 text-blue-300 text-xs px-3 py-1 rounded-full">PDF</span>
+              <span class="bg-blue-600/20 text-blue-300 text-xs px-3 py-1 rounded-full">Word</span>
+              <span class="bg-blue-600/20 text-blue-300 text-xs px-3 py-1 rounded-full">PowerPoint</span>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-teal-600/10 to-emerald-600/5 rounded-2xl p-8 border border-teal-500/20 hover:border-teal-500/40 transition-all duration-300 group">
+            <div class="w-16 h-16 bg-gradient-to-r from-teal-600 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-pen-nib text-white text-2xl" aria-hidden="true"></i>
+            </div>
+            <p class="text-xs font-semibold uppercase tracking-wider text-teal-300 mb-2" data-translate="ai.m2_scenario">Sadece konu mu var?</p>
+            <h3 class="text-xl font-bold text-white mb-3" data-translate="ai.m2_title">Anlatın, AI taslak çıkarsın</h3>
+            <p class="text-slate-400 leading-relaxed" data-translate="ai.m2_desc">Konunuzu ve hedef kitlenizi yazın. AI önce taslağı sunar, onayınızla birlikte tam içeriği yazar.</p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="bg-teal-600/20 text-teal-300 text-xs px-3 py-1 rounded-full">Taslak üretimi</span>
+              <span class="bg-teal-600/20 text-teal-300 text-xs px-3 py-1 rounded-full">İçerik yazımı</span>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-emerald-600/10 to-blue-600/5 rounded-2xl p-8 border border-emerald-500/20 hover:border-emerald-500/40 transition-all duration-300 group">
+            <div class="w-16 h-16 bg-gradient-to-r from-emerald-600 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-video text-white text-2xl" aria-hidden="true"></i>
+            </div>
+            <p class="text-xs font-semibold uppercase tracking-wider text-emerald-300 mb-2" data-translate="ai.m3_scenario">Eğitim videosu mu istiyorsunuz?</p>
+            <h3 class="text-xl font-bold text-white mb-3" data-translate="ai.m3_title">Yükleyin, AI seslendirsin</h3>
+            <p class="text-slate-400 leading-relaxed" data-translate="ai.m3_desc">PDF veya sunumunuzdan, yapay zeka sesiyle anlatımlı eğitim videosu çıkar. Çekim yok, montaj yok.</p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="bg-emerald-600/20 text-emerald-300 text-xs px-3 py-1 rounded-full">PDF → Video</span>
+              <span class="bg-emerald-600/20 text-emerald-300 text-xs px-3 py-1 rounded-full">AI seslendirme</span>
+            </div>
+          </div>
+        </div>
+        <div class="relative mb-16 mx-auto max-w-5xl">
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-teal-600/20 to-blue-600/20 rounded-3xl blur-3xl scale-95 -z-10"></div>
+          <div class="rounded-2xl overflow-hidden shadow-[0_25px_60px_-5px_rgba(59,130,246,0.3)] border border-white/10">
+            <div class="bg-gray-900 px-4 py-2.5 flex items-center gap-3">
+              <div class="flex gap-1.5">
+                <div class="w-2.5 h-2.5 bg-red-400 rounded-full"></div>
+                <div class="w-2.5 h-2.5 bg-yellow-400 rounded-full"></div>
+                <div class="w-2.5 h-2.5 bg-green-400 rounded-full"></div>
+              </div>
+              <div class="flex-1 bg-gray-700/70 rounded-md py-1 px-4 text-xs text-gray-400 text-center max-w-sm mx-auto" data-translate="ai.browser_bar">AI ile İçerik Oluştur · Okuma, Quiz veya Video Senaryosu</div>
+            </div>
+            <div class="relative">
+              <img src="screenshots/karne6.png" alt="Karne — AI ile İçerik Oluştur" class="w-full block" style="filter: brightness(0.92) saturate(1.1);" loading="lazy" width="1270" height="870" />
+              <div class="absolute inset-0 bg-gradient-to-r from-slate-950/40 via-transparent to-slate-950/40 pointer-events-none"></div>
+              <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-slate-950/60 to-transparent pointer-events-none"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mb-16 grid lg:grid-cols-2 gap-8 items-center">
+          <div class="space-y-4">
+            <span class="inline-block bg-teal-600/10 text-teal-400 text-xs font-semibold px-3 py-1 rounded-full border border-teal-500/20" data-translate="ai.section2_badge">Kurs İçerik Yapısı</span>
+            <h3 class="text-2xl font-bold text-white" data-translate="ai.section2_title">Bölümler, Öğrenme Çıktıları ve Ders Detayları</h3>
+            <p class="text-slate-400 leading-relaxed" data-translate="ai.section2_desc">Her ders için AI tarafından hazırlanan içerik yapısı, öğrenme çıktıları ve ayrıntılı açıklamaları tek ekranda görün. İstediğinizi düzenleyin veya onaylayın.</p>
+            <ul class="space-y-2 text-slate-300 text-sm">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-teal-400" aria-hidden="true"></i> <span data-translate="ai.section2_b1">Otomatik oluşturulan öğrenme çıktıları</span></li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-teal-400" aria-hidden="true"></i> <span data-translate="ai.section2_b2">Bölüm başına açıklama ve içerik özeti</span></li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-teal-400" aria-hidden="true"></i> <span data-translate="ai.section2_b3">Düzenleme ve onaylama tek tıkla</span></li>
+            </ul>
+          </div>
+          <div class="relative">
+            <div class="rounded-2xl overflow-hidden shadow-[0_20px_50px_-10px_rgba(59,130,246,0.25)] border border-white/10">
+              <img src="screenshots/karne3.png" alt="Karne — Ders İçerik Yapısı" class="w-full block" loading="lazy" />
+            </div>
+            <div class="absolute inset-0 -z-10 rounded-2xl blur-2xl opacity-15 bg-gradient-to-br from-teal-400 to-blue-400 scale-90"></div>
+          </div>
+        </div>
+        <div class="bg-gradient-to-r from-blue-600/20 via-teal-600/20 to-emerald-600/20 rounded-2xl p-8 border border-white/10 text-center">
+          <i class="fas fa-bolt text-yellow-400 text-3xl mb-3" aria-hidden="true"></i>
+          <h3 class="text-2xl font-bold text-white mb-3" data-translate="ai.banner_title">Tüm bunlar tek bir platformda, teknik bilgisiz, dakikalar içinde.</h3>
+          <p class="text-slate-400 max-w-2xl mx-auto" data-translate="ai.banner_desc">Karne'nin yapay zeka motoru, eğitim içeriği üretimindeki en büyük engeli ortadan kaldırır: zaman ve uzmanlık ihtiyacı. Artık herkes profesyonel eğitim hazırlayabilir.</p>
+        </div>
+      </div>
+    </section>
+    <section id="pdf-video" aria-labelledby="pdf-video-heading" class="py-16 sm:py-20 lg:py-24 bg-white font-inter">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span class="inline-block bg-emerald-50 text-emerald-600 text-sm font-semibold px-4 py-1.5 rounded-full mb-4 border border-emerald-100" data-translate="pdf_video.badge">PDF'den Videoya</span>
+          <h2 id="pdf-video-heading" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6 text-gray-900" data-translate="pdf_video.title">
+            PDF Yükle, <span class="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Eğitim Videosu Hazır</span>
+          </h2>
+          <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto" data-translate="pdf_video.subtitle">
+            Elinizdeki PDF belgelerini yapay zeka ile tematik bölümlere ayırın, video stilini seçin ve dakikalar içinde seslendirilmiş profesyonel eğitim videolarına dönüştürün.
+          </p>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <div class="space-y-5">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl flex items-center justify-center text-white font-bold text-lg flex-shrink-0">1</div>
+              <h3 class="text-2xl font-bold text-gray-900" data-translate="pdf_video.step1_title">PDF'i Yükle ve İçerik Oluştur</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed pl-13" data-translate="pdf_video.step1_desc">PDF dosyanızı sürükle-bırak ile yükleyin. İçerik dilini, zorluk seviyesini ve hedef video süresini seçin. Yapay zeka tematik bölümler oluşturur ve ders içeriğini hazırlar.</p>
+            <ul class="space-y-2.5 text-sm text-gray-600">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500" aria-hidden="true"></i> <span data-translate="pdf_video.step1_b1">Maksimum 30 MB, yalnızca metin tabanlı PDF</span></li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500" aria-hidden="true"></i> <span data-translate="pdf_video.step1_b2">Dil ve zorluk seviyesi seçimi</span></li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500" aria-hidden="true"></i> <span data-translate="pdf_video.step1_b3">Hedef video süresine göre AI anlatım metni</span></li>
+            </ul>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-xl border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
+            <img src="screenshots/karne4.png" alt="Karne — PDF'den İçerik Oluştur ekranı" class="w-full block" loading="lazy" />
+          </div>
+        </div>
         <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <!-- Content -->
-          <div class="space-y-8">
-            <h1
-              class="text-5xl lg:text-6xl font-bold leading-tight text-white drop-shadow-lg animate-fade-in-up"
-              data-translate="hero.title"
-              style="animation-delay: 0.2s; animation-fill-mode: both"
-            >
-              <span class="text-pink-400">Your</span>
-              <span class="text-purple-300">Corporate</span>
-              <span class="text-indigo-400">Learning</span>
-              <span class="text-pink-300">Partner</span>
-            </h1>
-            <p
-              class="text-xl text-slate-300 leading-relaxed animate-fade-in-up"
-              data-translate="hero.subtitle"
-              style="animation-delay: 0.7s; animation-fill-mode: both"
-            >
-              Transform your
-              <span class="text-pink-400 font-semibold"
-                >organization's learning processes</span
-              >
-              with a
-              <span class="text-purple-300 font-semibold"
-                >low-cost, easy-to-use</span
-              >, and quickly deployable platform. Our
-              <span class="text-indigo-400 font-semibold"
-                >content creation tools</span
-              >
-              make it simple to develop training materials, delivering a
-              <span class="text-pink-300 font-semibold"
-                >modern learning experience</span
-              >
-              to your employees and members effortlessly.
-            </p>
-            <div
-              class="flex flex-col sm:flex-row gap-4 animate-fade-in-up"
-              style="animation-delay: 0.8s; animation-fill-mode: both"
-            >
-              <a
-                href="https://my.karne.app"
-                class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-pink-500/40 border border-pink-400/30 hover:border-pink-300/50 animate-scale-in"
-                style="animation-delay: 0.9s; animation-fill-mode: both"
-                data-translate="hero.explore_courses"
-                >Explore Courses</a
-              >
-              <a
-                href="#about"
-                class="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-semibold rounded-xl border border-white/30 transition-all duration-300 transform hover:scale-105 animate-scale-in"
-                style="animation-delay: 1s; animation-fill-mode: both"
-                data-translate="hero.learn_more"
-                >Learn More</a
-              >
-            </div>
+          <div class="rounded-2xl overflow-hidden shadow-xl border border-gray-200 hover:shadow-2xl transition-shadow duration-300 order-2 lg:order-1">
+            <img src="screenshots/karne5.png" alt="Karne — Bölümleri İncele ve Video Stili Seç" class="w-full block" loading="lazy" />
           </div>
-
-          <!-- Features Grid -->
-          <div class="grid grid-cols-2 gap-6">
-            <div
-              class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 animate-fade-in-up"
-              style="animation-delay: 0.3s; animation-fill-mode: both"
-            >
-              <div
-                class="w-12 h-12 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-pink-500/30 border border-pink-400/40"
-              >
-                <i class="fas fa-users text-white text-xl"></i>
-              </div>
-              <h3
-                class="text-lg font-semibold text-white mb-2"
-                data-translate="hero.feature1.title"
-              >
-                Team Learning
-              </h3>
-              <p
-                class="text-slate-300 text-sm"
-                data-translate="hero.feature1.desc"
-              >
-                Collaborative learning environments for your organization
-              </p>
+          <div class="space-y-5 order-1 lg:order-2">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-gradient-to-r from-teal-600 to-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-lg flex-shrink-0">2</div>
+              <h3 class="text-2xl font-bold text-gray-900" data-translate="pdf_video.step2_title">Video Stili Seç, Eğitim Videosuna Dönüştür</h3>
             </div>
-            <div
-              class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 animate-fade-in-up"
-              style="animation-delay: 0.4s; animation-fill-mode: both"
-            >
-              <div
-                class="w-12 h-12 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-pink-500/30 border border-pink-400/40"
-              >
-                <i class="fas fa-chart-line text-white text-xl"></i>
+            <p class="text-gray-600 leading-relaxed" data-translate="pdf_video.step2_desc">Oluşturulan bölümleri inceleyin, her bölümün görsel ve metin içeriğini düzenleyin. Video stilini belirleyin ve tek tıkla eğitim videosuna dönüştürün.</p>
+            <div class="grid grid-cols-2 gap-3 text-sm">
+              <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 text-center">
+                <div class="font-semibold text-blue-700 mb-1" data-translate="pdf_video.style1">Modern Tech</div>
+                <div class="text-gray-500 text-xs" data-translate="pdf_video.style1_sub">Aurora · Cam kartı</div>
               </div>
-              <h3
-                class="text-lg font-semibold text-white mb-2"
-                data-translate="hero.feature2.title"
-              >
-                Progress Tracking
-              </h3>
-              <p
-                class="text-slate-300 text-sm"
-                data-translate="hero.feature2.desc"
-              >
-                Real-time analytics and performance monitoring
-              </p>
-            </div>
-            <div
-              class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 animate-fade-in-up"
-              style="animation-delay: 0.5s; animation-fill-mode: both"
-            >
-              <div
-                class="w-12 h-12 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-pink-500/30 border border-pink-400/40"
-              >
-                <i class="fas fa-mobile-alt text-white text-xl"></i>
+              <div class="bg-slate-50 border border-slate-200 rounded-xl p-3 text-center">
+                <div class="font-semibold text-slate-700 mb-1" data-translate="pdf_video.style2">Sinematik</div>
+                <div class="text-gray-500 text-xs" data-translate="pdf_video.style2_sub">Letterbox · Film noir</div>
               </div>
-              <h3
-                class="text-lg font-semibold text-white mb-2"
-                data-translate="hero.feature3.title"
-              >
-                Mobile Access
-              </h3>
-              <p
-                class="text-slate-300 text-sm"
-                data-translate="hero.feature3.desc"
-              >
-                Learn anywhere, anytime with our mobile platform
-              </p>
-            </div>
-            <div
-              class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 animate-fade-in-up"
-              style="animation-delay: 0.6s; animation-fill-mode: both"
-            >
-              <div
-                class="w-12 h-12 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-pink-500/30 border border-pink-400/40"
-              >
-                <i class="fas fa-certificate text-white text-xl"></i>
+              <div class="bg-indigo-50 border border-indigo-100 rounded-xl p-3 text-center">
+                <div class="font-semibold text-indigo-700 mb-1" data-translate="pdf_video.style3">Kinetik</div>
+                <div class="text-gray-500 text-xs" data-translate="pdf_video.style3_sub">3D flip · Neon</div>
               </div>
-              <h3
-                class="text-lg font-semibold text-white mb-2"
-                data-translate="hero.feature4.title"
-              >
-                Certification
-              </h3>
-              <p
-                class="text-slate-300 text-sm"
-                data-translate="hero.feature4.desc"
-              >
-                Official certificates recognized by institutions
-              </p>
+              <div class="bg-teal-50 border border-teal-100 rounded-xl p-3 text-center">
+                <div class="font-semibold text-teal-700 mb-1" data-translate="pdf_video.style4">Yayın / Haber</div>
+                <div class="text-gray-500 text-xs" data-translate="pdf_video.style4_sub">Navy · Info kutu</div>
+              </div>
             </div>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500" aria-hidden="true"></i> <span data-translate="pdf_video.step2_b1">Kurumsal logo eklenebilir</span></li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500" aria-hidden="true"></i> <span data-translate="pdf_video.step2_b2">Metin içeriği olarak da kaydedilebilir</span></li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500" aria-hidden="true"></i> <span data-translate="pdf_video.step2_b3">Tüm bölümleri tek seferde dönüştür</span></li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- About Section -->
-    <section
-      id="about"
-      class="py-20 bg-gray-100 text-gray-900 font-inter relative"
-    >
-      <div
-        class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"
-      ></div>
+    <section id="features" aria-labelledby="features-heading" class="py-16 sm:py-20 lg:py-24 bg-gray-50 text-gray-900 font-inter">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-          <h2
-            class="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent"
-          >
-            Neden <span class="text-gray-900">Karne?</span>
+          <span class="inline-block bg-teal-50 text-teal-600 text-sm font-semibold px-4 py-1.5 rounded-full mb-4 border border-teal-100" data-translate="lxp.badge">Öğrenme Deneyimi</span>
+          <h2 id="features-heading" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6 text-gray-900" data-translate="lxp.title">
+            Öğrenmek Artık Bir <span class="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Deneyim</span>
           </h2>
-          <p
-            class="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto"
-            data-translate="about.description"
-          >
-            Karne is a comprehensive e-learning platform specifically designed
-            for government officials, civil servants, and public sector
-            professionals. Our platform offers specialized training programs
-            that align with national standards and international best practices.
+          <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto" data-translate="lxp.subtitle">
+            Karne, çalışanlarınızı kurs izlemenin ötesine taşır. Oyunlaştırma'dan kariyer gelişimine, yetenek değerlendirmeden anlık bildirimlere — tam bir öğrenme ekosistemi.
           </p>
         </div>
 
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-          <div class="space-y-8">
-            <!-- Cost Effective -->
-            <div
-              class="bg-white rounded-2xl p-8 border border-gray-200 hover:border-pink-300 hover:shadow-lg transition-all duration-300"
-            >
-              <div class="flex items-start space-x-6">
-                <div
-                  class="w-16 h-16 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0"
-                >
-                  <i class="fas fa-dollar-sign text-white text-2xl"></i>
-                </div>
-                <div>
-                  <h3
-                    class="text-2xl font-bold text-gray-900 mb-3"
-                    data-translate="benefits.cost_effective.title"
-                  >
-                    Cost-Effective Solution
-                  </h3>
-                  <p
-                    class="text-gray-700 leading-relaxed"
-                    data-translate="benefits.cost_effective.desc"
-                  >
-                    Reduce training costs by up to 70% compared to traditional
-                    classroom training. No travel expenses, venue costs, or
-                    printed materials needed.
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <!-- Easy Content Management -->
-            <div
-              class="bg-white rounded-2xl p-8 border border-gray-200 hover:border-purple-300 hover:shadow-lg transition-all duration-300"
-            >
-              <div class="flex items-start space-x-6">
-                <div
-                  class="w-16 h-16 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0"
-                >
-                  <i class="fas fa-edit text-white text-2xl"></i>
-                </div>
-                <div>
-                  <h3
-                    class="text-2xl font-bold text-gray-900 mb-3"
-                    data-translate="benefits.content_management.title"
-                  >
-                    Easy Content Management
-                  </h3>
-                  <p
-                    class="text-gray-700 leading-relaxed"
-                    data-translate="benefits.content_management.desc"
-                  >
-                    Create, edit, and manage content effortlessly. Our intuitive
-                    interface makes it simple to update courses, add new
-                    materials, and keep content fresh and relevant.
-                  </p>
-                </div>
-              </div>
+          <div class="feature-card bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 group">
+            <div class="w-14 h-14 bg-gradient-to-r from-blue-600 to-teal-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-trophy text-white text-xl" aria-hidden="true"></i>
             </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3" data-translate="lxp.f1_title">Oyunlaştırma</h3>
+            <p class="text-gray-600 leading-relaxed" data-translate="lxp.f1_desc">Puanlar, rozetler, liderlik tablosu ve başarı seviyeleriyle öğrenmeyi motive edici bir deneyime dönüştürün. Tamamlama oranları dramatik biçimde artar.</p>
+          </div>
 
-            <!-- Customizable -->
-            <div
-              class="bg-white rounded-2xl p-8 border border-gray-200 hover:border-indigo-300 hover:shadow-lg transition-all duration-300"
-            >
-              <div class="flex items-start space-x-6">
-                <div
-                  class="w-16 h-16 bg-gradient-to-r from-indigo-600 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0"
-                >
-                  <i class="fas fa-cogs text-white text-2xl"></i>
-                </div>
-                <div>
-                  <h3
-                    class="text-2xl font-bold text-gray-900 mb-3"
-                    data-translate="benefits.customizable.title"
-                  >
-                    Fully Customizable
-                  </h3>
-                  <p
-                    class="text-gray-700 leading-relaxed"
-                    data-translate="benefits.customizable.desc"
-                  >
-                    Tailor the platform to your institution's specific needs.
-                    Custom branding, course structures, and learning paths
-                    designed for your organization.
-                  </p>
-                </div>
-              </div>
+          <div class="feature-card bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-lg hover:border-teal-200 transition-all duration-300 group">
+            <div class="w-14 h-14 bg-gradient-to-r from-teal-600 to-emerald-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-chart-bar text-white text-xl" aria-hidden="true"></i>
             </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3" data-translate="lxp.f2_title">Yetenek Değerlendirme</h3>
+            <p class="text-gray-600 leading-relaxed" data-translate="lxp.f2_desc">Çalışanlarınızın yetkinlik haritasını çıkarın. Hangi becerilerde güçlü, nerelerde gelişim gerekiyor? Karne bunu otomatik analiz eder ve kişiselleştirilmiş öğrenme yolları önerir.</p>
+          </div>
 
-            <!-- Integration -->
-            <div
-              class="bg-white rounded-2xl p-8 border border-gray-200 hover:border-pink-300 hover:shadow-lg transition-all duration-300"
-            >
-              <div class="flex items-start space-x-6">
-                <div
-                  class="w-16 h-16 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0"
-                >
-                  <i class="fas fa-plug text-white text-2xl"></i>
-                </div>
-                <div>
-                  <h3
-                    class="text-2xl font-bold text-gray-900 mb-3"
-                    data-translate="benefits.integration.title"
-                  >
-                    Seamless Integration
-                  </h3>
-                  <p
-                    class="text-gray-700 leading-relaxed"
-                    data-translate="benefits.integration.desc"
-                  >
-                    Integrate with your existing systems - ERP, CRM, HR systems,
-                    and more. Single sign-on and automated user management for
-                    maximum efficiency.
-                  </p>
-                </div>
+          <div class="feature-card bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-lg hover:border-emerald-200 transition-all duration-300 group">
+            <div class="w-14 h-14 bg-gradient-to-r from-emerald-600 to-blue-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-route text-white text-xl" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3" data-translate="lxp.f3_title">Kariyer Yolu</h3>
+            <p class="text-gray-600 leading-relaxed" data-translate="lxp.f3_desc">Pozisyon bazlı kariyer gelişim yolları tanımlayın. Çalışanlar, bir üst role geçebilmek için hangi becerileri kazanmaları gerektiğini net biçimde görür ve o yolda ilerler.</p>
+          </div>
+
+          <div class="feature-card bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 group">
+            <div class="w-14 h-14 bg-gradient-to-r from-blue-600 to-teal-500 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-user-check text-white text-xl" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3" data-translate="lxp.f4_title">Oryantasyon Süreçleri</h3>
+            <p class="text-gray-600 leading-relaxed" data-translate="lxp.f4_desc">Yeni çalışanları hızla kuruma entegre edin. Oryantasyon programlarınızı bir kez hazırlayın, her yeni başlayan otomatik olarak sürece dahil edilsin. İlk gün deneyimi baştan değişir.</p>
+          </div>
+
+          <div class="feature-card bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-lg hover:border-teal-200 transition-all duration-300 group">
+            <div class="w-14 h-14 bg-gradient-to-r from-teal-600 to-blue-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-bell text-white text-xl" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3" data-translate="lxp.f5_title">Anlık Bilgilendirme</h3>
+            <p class="text-gray-600 leading-relaxed" data-translate="lxp.f5_desc">Duyuru, güncelleme veya acil eğitimleri anında tüm ekibinize iletin. Anlık bildirim, e-posta veya uygulama içi mesajla kurumunuzun tüm birimleri her zaman bilgili kalır.</p>
+          </div>
+
+          <div class="feature-card bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-lg hover:border-emerald-200 transition-all duration-300 group">
+            <div class="w-14 h-14 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-chart-pie text-white text-xl" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3" data-translate="lxp.f6_title">Detaylı Raporlama</h3>
+            <p class="text-gray-600 leading-relaxed" data-translate="lxp.f6_desc">Birey, ekip ve kurum bazında derinlemesine analitikler. Kim ne öğrendi, hangi içerik ne kadar tamamlandı, hangi bölümde takılındı? Tüm veriler tek ekranda, dışa aktarılabilir formatlarda.</p>
+          </div>
+
+        </div>
+        <div class="mt-16">
+          <div class="text-center mb-8">
+            <span class="inline-block bg-blue-50 text-blue-600 text-xs font-semibold px-3 py-1 rounded-full border border-blue-100" data-translate="lxp.preview_badge">Gerçek Platform</span>
+            <h3 class="text-2xl font-bold text-gray-900 mt-3" data-translate="lxp.preview_title">Zengin Kurs Kataloğu, Kolayca Yönetin</h3>
+            <p class="text-gray-500 mt-2 max-w-2xl mx-auto" data-translate="lxp.preview_subtitle">Tüm eğitimlerinizi tek ekrandan görüntüleyin, yeni kurs oluşturun, seviyeye ve kategoriye göre filtreleyin.</p>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+            <img src="screenshots/karne1.png" alt="Karne — Kurs Kataloğu" class="w-full block" loading="lazy" />
+          </div>
+        </div>
+        <div class="mt-10 grid lg:grid-cols-2 gap-10 items-start">
+          <div class="space-y-4">
+            <h3 class="text-xl font-bold text-gray-900" data-translate="lxp.kurs_title">Kurs Detayı ve İçerik Yönetimi</h3>
+            <p class="text-gray-500 leading-relaxed" data-translate="lxp.preview_desc">Kurslar, dersler ve öğrenme çıktılarıyla tam yapılandırılmış içerik yönetimi. Her çalışan tam olarak ne öğreneceğini ve nerede olduğunu bilir.</p>
+            <ul class="space-y-2 text-sm text-gray-600 mb-6">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500" aria-hidden="true"></i><span data-translate="lxp.kurs_b1">Ders sıralama ve yayın durumu kontrolü</span></li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500" aria-hidden="true"></i><span data-translate="lxp.kurs_b2">Sertifika ve forum entegrasyonu</span></li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500" aria-hidden="true"></i><span data-translate="lxp.kurs_b3">Anlık raporlar ve ilerleme takibi</span></li>
+            </ul>
+            <div class="rounded-2xl overflow-hidden shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+              <img src="screenshots/karne2.png" alt="Karne — Kurs Detay Ekranı" class="w-full block" loading="lazy" />
+            </div>
+          </div>
+          <div class="space-y-4">
+            <h3 class="text-xl font-bold text-gray-900" data-translate="lxp.ders_title">Ders İçerikleri ve Öğrenme Çıktıları</h3>
+            <p class="text-gray-500 leading-relaxed" data-translate="lxp.ders_desc">Her ders için AI tarafından hazırlanan içerik yapısını, öğrenme çıktılarını ve açıklamaları tek ekranda görün ve düzenleyin.</p>
+            <ul class="space-y-2 text-sm text-gray-600 mb-6">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500" aria-hidden="true"></i><span data-translate="lxp.ders_b1">Bölüm bazlı öğrenme çıktıları</span></li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500" aria-hidden="true"></i><span data-translate="lxp.ders_b2">Zorunlu ve seçmeli ders ayrımı</span></li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500" aria-hidden="true"></i><span data-translate="lxp.ders_b3">İçerik düzenleme kolaylığı</span></li>
+            </ul>
+            <div class="rounded-2xl overflow-hidden shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+              <img src="screenshots/karne3.png" alt="Karne — Ders İçerik Yapısı" class="w-full block" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <div class="mt-10 flex flex-wrap gap-3 justify-center">
+          <span class="bg-white border border-gray-200 text-gray-700 text-sm px-4 py-2 rounded-full shadow-sm"><i class="fas fa-certificate text-blue-500 mr-1.5" aria-hidden="true"></i><span data-translate="lxp.chip1">Dijital Sertifika</span></span>
+          <span class="bg-white border border-gray-200 text-gray-700 text-sm px-4 py-2 rounded-full shadow-sm"><i class="fas fa-mobile-screen text-teal-500 mr-1.5" aria-hidden="true"></i><span data-translate="lxp.chip2">Tam Mobil Uyumluluk</span></span>
+          <span class="bg-white border border-gray-200 text-gray-700 text-sm px-4 py-2 rounded-full shadow-sm"><i class="fas fa-globe text-emerald-500 mr-1.5" aria-hidden="true"></i><span data-translate="lxp.chip3">4 Dil Desteği</span></span>
+          <span class="bg-white border border-gray-200 text-gray-700 text-sm px-4 py-2 rounded-full shadow-sm"><i class="fas fa-key text-blue-500 mr-1.5" aria-hidden="true"></i><span data-translate="lxp.chip4">SSO &amp; Entegrasyon</span></span>
+          <span class="bg-white border border-gray-200 text-gray-700 text-sm px-4 py-2 rounded-full shadow-sm"><i class="fas fa-shield-halved text-teal-500 mr-1.5" aria-hidden="true"></i><span data-translate="lxp.chip5">GDPR Uyumlu</span></span>
+          <span class="bg-white border border-gray-200 text-gray-700 text-sm px-4 py-2 rounded-full shadow-sm"><i class="fas fa-qrcode text-emerald-500 mr-1.5" aria-hidden="true"></i><span data-translate="lxp.chip6">QR Sertifika Doğrulama</span></span>
+        </div>
+      </div>
+    </section>
+    <section id="ogrenme-yollari" aria-labelledby="ogrenme-yollari-heading" class="py-16 sm:py-20 lg:py-24 bg-slate-950 text-white font-inter">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-10 items-center" style="grid-template-columns: 1fr 1.6fr;">
+          <div class="space-y-6">
+            <span class="inline-block bg-violet-600/10 text-violet-400 text-sm font-semibold px-4 py-1.5 rounded-full border border-violet-500/20" data-translate="lp.badge">Öğrenme Yolları</span>
+            <h2 id="ogrenme-yollari-heading" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white" data-translate="lp.title">
+              Kişiselleştirilmiş <span class="text-violet-400">Öğrenme Yolları</span>
+            </h2>
+            <p class="text-xl text-slate-400 leading-relaxed" data-translate="lp.subtitle">Her çalışana, kariyer hedeflerine ve mevcut yetkinliklerine göre özelleştirilmiş öğrenme yolları tanımlayın. Görsel harita ile ilerlemeyi adım adım takip edin.</p>
+            <ul class="space-y-4 text-slate-300">
+              <li class="flex items-start gap-3">
+                <div class="w-7 h-7 bg-violet-600/20 border border-violet-500/30 rounded-lg flex items-center justify-center mt-0.5 flex-shrink-0"><i class="fas fa-check text-violet-400 text-xs" aria-hidden="true"></i></div>
+                <span data-translate="lp.b1">Pozisyon ve hedef bazlı kişiselleştirilmiş yollar</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-7 h-7 bg-blue-600/20 border border-blue-500/30 rounded-lg flex items-center justify-center mt-0.5 flex-shrink-0"><i class="fas fa-check text-blue-400 text-xs" aria-hidden="true"></i></div>
+                <span data-translate="lp.b2">Görsel harita ile adım adım ilerleme takibi</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-7 h-7 bg-teal-600/20 border border-teal-500/30 rounded-lg flex items-center justify-center mt-0.5 flex-shrink-0"><i class="fas fa-check text-teal-400 text-xs" aria-hidden="true"></i></div>
+                <span data-translate="lp.b3">Kilit aktiviteler, zorunlu adımlar ve önkoşullar</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-7 h-7 bg-emerald-600/20 border border-emerald-500/30 rounded-lg flex items-center justify-center mt-0.5 flex-shrink-0"><i class="fas fa-check text-emerald-400 text-xs" aria-hidden="true"></i></div>
+                <span data-translate="lp.b4">3 aylık, 6 aylık veya özel süre planlaması</span>
+              </li>
+            </ul>
+            <div class="flex gap-4">
+              <div class="bg-white/5 rounded-xl p-4 border border-white/10 flex-1 text-center">
+                <div class="text-3xl font-extrabold text-violet-400 mb-1">AI</div>
+                <div class="text-slate-300 text-xs" data-translate="lp.mini1">Destekli yol önerisi</div>
+              </div>
+              <div class="bg-white/5 rounded-xl p-4 border border-white/10 flex-1 text-center">
+                <div class="text-3xl font-extrabold text-blue-400 mb-1">360°</div>
+                <div class="text-slate-300 text-xs" data-translate="lp.mini2">Gelişim görünümü</div>
               </div>
             </div>
           </div>
-          <div class="space-y-12">
-            <!-- Interactive Stats & Features -->
-            <div class="grid grid-cols-2 gap-8">
-              <div
-                class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300 text-center"
-              >
-                <div
-                  class="w-20 h-20 bg-gradient-to-r from-pink-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"
-                >
-                  <i class="fas fa-users text-white text-3xl"></i>
-                </div>
-                <h3 class="text-3xl font-bold text-gray-900 mb-2">500+</h3>
-                <p class="text-gray-600" data-translate="stats.learners">
-                  Active Learners
-                </p>
-              </div>
-              <div
-                class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300 text-center"
-              >
-                <div
-                  class="w-20 h-20 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4"
-                >
-                  <i class="fas fa-graduation-cap text-white text-3xl"></i>
-                </div>
-                <h3 class="text-3xl font-bold text-gray-900 mb-2">50+</h3>
-                <p class="text-gray-600" data-translate="stats.courses">
-                  Courses Available
-                </p>
-              </div>
+          <div class="relative">
+            <div class="rounded-2xl overflow-hidden shadow-[0_25px_60px_-5px_rgba(124,58,237,0.25)] border border-white/10">
+              <img src="screenshots/karne8.png" alt="Karne — Öğrenme Yolları görsel haritası" class="w-full block" loading="lazy" />
             </div>
-
-            <!-- Key Features Grid -->
-            <div class="grid grid-cols-3 gap-6">
-              <div class="text-center">
-                <div
-                  class="w-16 h-16 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4"
-                >
-                  <i class="fas fa-shield-alt text-white text-2xl"></i>
-                </div>
-                <h4
-                  class="text-lg font-semibold text-gray-900 mb-2"
-                  data-translate="features.secure.title"
-                >
-                  Secure Platform
-                </h4>
-                <p
-                  class="text-sm text-gray-600"
-                  data-translate="features.secure.desc"
-                >
-                  Enterprise-grade security
-                </p>
-              </div>
-              <div class="text-center">
-                <div
-                  class="w-16 h-16 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-4"
-                >
-                  <i class="fas fa-mobile-alt text-white text-2xl"></i>
-                </div>
-                <h4
-                  class="text-lg font-semibold text-gray-900 mb-2"
-                  data-translate="features.mobile_ready.title"
-                >
-                  Mobile Ready
-                </h4>
-                <p
-                  class="text-sm text-gray-600"
-                  data-translate="features.mobile_ready.desc"
-                >
-                  Learn on any device
-                </p>
-              </div>
-              <div class="text-center">
-                <div
-                  class="w-16 h-16 bg-gradient-to-r from-indigo-600 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4"
-                >
-                  <i class="fas fa-headset text-white text-2xl"></i>
-                </div>
-                <h4
-                  class="text-lg font-semibold text-gray-900 mb-2"
-                  data-translate="features.support.title"
-                >
-                  24/7 Support
-                </h4>
-                <p
-                  class="text-sm text-gray-600"
-                  data-translate="features.support.desc"
-                >
-                  Always here to help
-                </p>
-              </div>
+            <div class="absolute inset-0 -z-10 rounded-2xl blur-3xl opacity-15 bg-gradient-to-br from-violet-400 to-blue-400 scale-90"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="yetkinlikler" aria-labelledby="yetkinlikler-heading" class="py-16 sm:py-20 lg:py-24 bg-gray-50 font-inter">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-10 items-center" style="grid-template-columns: 1.6fr 1fr;">
+          <div class="relative order-2 lg:order-1">
+            <div class="rounded-2xl overflow-hidden shadow-xl border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
+              <img src="screenshots/karne7.png" alt="Karne — Yetkinlikler yönetim ekranı" class="w-full block" loading="lazy" />
             </div>
-
-            <!-- Success Metrics -->
-            <div
-              class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300"
-            >
-              <div class="grid grid-cols-2 gap-8">
-                <div class="text-center">
-                  <h3 class="text-4xl font-bold text-pink-600 mb-2">95%</h3>
-                  <p class="text-gray-600" data-translate="stats.completion">
-                    Completion Rate
-                  </p>
-                </div>
-                <div class="text-center">
-                  <h3 class="text-4xl font-bold text-purple-600 mb-2">24/7</h3>
-                  <p class="text-gray-600" data-translate="stats.access">
-                    Platform Access
-                  </p>
-                </div>
+            <div class="absolute inset-0 -z-10 rounded-2xl blur-2xl opacity-20 bg-gradient-to-br from-blue-400 to-teal-400 scale-90"></div>
+          </div>
+          <div class="space-y-6 order-1 lg:order-2">
+            <span class="inline-block bg-blue-50 text-blue-600 text-sm font-semibold px-4 py-1.5 rounded-full border border-blue-100" data-translate="comp.badge">Yetkinlik Yönetimi</span>
+            <h2 id="yetkinlikler-heading" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900" data-translate="comp.title">
+              Ekibinizin <span class="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Yetkinlik Haritasını</span> Çıkarın
+            </h2>
+            <p class="text-xl text-gray-600 leading-relaxed" data-translate="comp.subtitle">Her pozisyon için yetkinlikler tanımlayın, değerlendirmeler yapın ve çalışanlarınızın hangi becerilerde güçlü, nerede gelişim gerektiğini net olarak görün.</p>
+            <ul class="space-y-4 text-gray-600">
+              <li class="flex items-start gap-3">
+                <div class="w-7 h-7 bg-blue-100 rounded-lg flex items-center justify-center mt-0.5 flex-shrink-0"><i class="fas fa-check text-blue-600 text-xs" aria-hidden="true"></i></div>
+                <span data-translate="comp.b1">Departman ve pozisyon bazlı yetkinlik grupları</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-7 h-7 bg-teal-100 rounded-lg flex items-center justify-center mt-0.5 flex-shrink-0"><i class="fas fa-check text-teal-600 text-xs" aria-hidden="true"></i></div>
+                <span data-translate="comp.b2">Geçme eşiği belirleme ve otomatik değerlendirme</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-7 h-7 bg-emerald-100 rounded-lg flex items-center justify-center mt-0.5 flex-shrink-0"><i class="fas fa-check text-emerald-600 text-xs" aria-hidden="true"></i></div>
+                <span data-translate="comp.b3">Çalışanlara yetkinlik atama ve ilerleme takibi</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-7 h-7 bg-blue-100 rounded-lg flex items-center justify-center mt-0.5 flex-shrink-0"><i class="fas fa-check text-blue-600 text-xs" aria-hidden="true"></i></div>
+                <span data-translate="comp.b4">Meslekten bağımsız çoklu yetkinlik grubu desteği</span>
+              </li>
+            </ul>
+            <div class="bg-gradient-to-r from-blue-50 to-teal-50 rounded-2xl p-5 border border-blue-100">
+              <div class="flex items-center gap-3 mb-2">
+                <i class="fas fa-lightbulb text-blue-500" aria-hidden="true"></i>
+                <span class="font-semibold text-gray-900 text-sm" data-translate="comp.tip_title">Akıllı Yetkinlik Eşleştirmesi</span>
               </div>
+              <p class="text-gray-600 text-sm leading-relaxed" data-translate="comp.tip_desc">Yetkinlik değerlendirme sonuçlarına göre sistem otomatik olarak çalışanlara uygun kursları ve öğrenme yollarını önerir.</p>
             </div>
           </div>
         </div>
       </div>
-      <div
-        class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"
-      ></div>
     </section>
-
-    <!-- References Section -->
-    <section
-      id="references"
-      class="py-20 bg-slate-800 text-white font-inter relative"
-    >
-      <div
-        class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-500 to-transparent"
-      ></div>
+    <section id="gamification" aria-labelledby="gamification-heading" class="py-16 sm:py-20 lg:py-24 bg-white font-inter">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-10 items-center" style="grid-template-columns: 1fr 1.6fr;">
+          <div class="space-y-6">
+            <span class="inline-block bg-amber-50 text-amber-600 text-sm font-semibold px-4 py-1.5 rounded-full border border-amber-100" data-translate="gam.badge">Oyunlaştırma</span>
+            <h2 id="gamification-heading" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900" data-translate="gam.title">
+              Öğrenmeyi <span class="animate-gradient-text">Ödüllendirin</span>
+            </h2>
+            <p class="text-xl text-gray-600 leading-relaxed" data-translate="gam.subtitle">XP puanları, seviye atlama, sıralama tablosu ve günlük seri takibiyle çalışanlarınızın öğrenme motivasyonunu sürekli canlı tutun.</p>
+            <div class="flex flex-col sm:flex-row gap-5 mt-2">
+              <div class="stat-card-amber">
+                <div class="stat-num">%92</div>
+                <div class="stat-label" data-translate="gam.stat1_label">Eğitim Tamamlanma</div>
+                <div class="stat-sub" data-translate="gam.stat1_sub">Oyunlaştırma öncesi %45'ti</div>
+              </div>
+              <div class="stat-card-orange">
+                <div class="stat-num">3x</div>
+                <div class="stat-label" data-translate="gam.stat2_label">Daha Yüksek Katılım</div>
+                <div class="stat-sub" data-translate="gam.stat2_sub">Klasik LMS'e kıyasla</div>
+              </div>
+            </div>
+            <ul class="space-y-3 text-gray-600">
+              <li class="flex items-start gap-3">
+                <div class="w-7 h-7 bg-amber-100 rounded-lg flex items-center justify-center mt-0.5 flex-shrink-0"><i class="fas fa-star text-amber-500 text-xs" aria-hidden="true"></i></div>
+                <span data-translate="gam.b1">XP puanları, seviye sistemi ve ilerleme çubuğu</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-7 h-7 bg-orange-100 rounded-lg flex items-center justify-center mt-0.5 flex-shrink-0"><i class="fas fa-trophy text-orange-500 text-xs" aria-hidden="true"></i></div>
+                <span data-translate="gam.b2">Sıralama tablosu ile kurumsal rekabet</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-7 h-7 bg-red-100 rounded-lg flex items-center justify-center mt-0.5 flex-shrink-0"><i class="fas fa-fire text-red-500 text-xs" aria-hidden="true"></i></div>
+                <span data-translate="gam.b3">Günlük seri (streak) takibi</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-7 h-7 bg-amber-100 rounded-lg flex items-center justify-center mt-0.5 flex-shrink-0"><i class="fas fa-certificate text-amber-500 text-xs" aria-hidden="true"></i></div>
+                <span data-translate="gam.b4">Tamamlanan kurslar, sınavlar ve kazanılan sertifikalar</span>
+              </li>
+            </ul>
+          </div>
+          <div class="relative">
+            <div class="rounded-2xl overflow-hidden shadow-xl border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
+              <img src="screenshots/karne9.png" alt="Karne — Başarılarım, puanlar ve gamification" class="w-full block" loading="lazy" />
+            </div>
+            <div class="absolute inset-0 -z-10 rounded-2xl blur-2xl opacity-20 bg-gradient-to-br from-amber-400 to-orange-400 scale-90"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section aria-labelledby="deployment-heading" class="py-16 sm:py-20 lg:py-24 bg-slate-950 text-white font-inter">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-          <h2
-            class="text-4xl lg:text-5xl font-bold mb-6 text-white"
-            data-translate="references.title"
-          >
-            Our Partners & References
+          <h2 id="deployment-heading" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6" data-translate="deploy.title">
+            Sınırsız Kullanım, <span class="text-teal-400">Esnek Altyapı</span>
           </h2>
-          <p
-            class="text-xl text-slate-300 max-w-3xl mx-auto"
-            data-translate="references.subtitle"
-          >
-            Karne is proud to be supported by leading government institutions
-            and academic organizations
+          <p class="text-base sm:text-lg lg:text-xl text-slate-400 max-w-2xl mx-auto" data-translate="deploy.subtitle">
+            Büyüdükçe maliyet artmasın. Güvenlik ve veri egemenliği konusunda taviz vermeyin.
           </p>
         </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
-            class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-center"
-          >
-            <div
-              class="w-24 h-24 bg-white rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg p-3"
-            >
-              <img
-                src="logos/ab.png"
-                alt="European Union Delegation"
-                class="w-full h-full object-contain"
-              />
+        <div class="bg-gradient-to-r from-blue-600/10 via-teal-600/10 to-emerald-600/10 rounded-2xl p-10 border border-white/10 text-center mb-12">
+          <div class="text-8xl font-extrabold text-blue-400 mb-4">&infin;</div>
+          <h3 class="text-3xl font-bold text-white mb-3" data-translate="deploy.unlimited_title">Kullanıcı ve Eğitim İçeriği Sınırı Yok</h3>
+          <p class="text-slate-400 text-lg max-w-xl mx-auto" data-translate="deploy.unlimited_desc">5 kişi de kullansa, 50.000 kişi de — fiyat değişmez. İçerik sayısı artsa da ek maliyet olmaz. Gerçek anlamda ölçeklenebilir.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white/5 rounded-2xl p-8 border border-white/10 hover:border-blue-500/30 transition-all duration-300">
+            <div class="w-14 h-14 bg-gradient-to-r from-blue-600 to-teal-600 rounded-xl flex items-center justify-center mb-5">
+              <i class="fas fa-server text-white text-xl" aria-hidden="true"></i>
             </div>
-            <h3
-              class="text-lg font-semibold text-white mb-4"
-              data-translate="ref1.title"
-            >
-              European Union Delegation of Türkiye
-            </h3>
-            <p
-              class="text-slate-300 leading-relaxed"
-              data-translate="ref1.desc"
-            >
-              Official EU representation in Turkey, supporting educational
-              initiatives and professional development programs.
-            </p>
+            <h3 class="text-2xl font-bold text-white mb-3" data-translate="deploy.onprem_title">Yerinde Kurulum</h3>
+            <p class="text-slate-400 leading-relaxed mb-5" data-translate="deploy.onprem_desc">Platform, kurumunuzun kendi sunucularına kurulur. Tüm veriler sizin altyapınızda kalır. Veri egemenliği ve güvenlik önceliğinizse bu seçenek tam size göre.</p>
+            <ul class="space-y-2 text-slate-400 text-sm">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-blue-400" aria-hidden="true"></i><span data-translate="deploy.onprem1">Veriler kurumunuzun sunucusunda</span></li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-blue-400" aria-hidden="true"></i><span data-translate="deploy.onprem2">Tam kontrol, özel yapılandırma</span></li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-blue-400" aria-hidden="true"></i><span data-translate="deploy.onprem3">Mevcut altyapıyla entegrasyon</span></li>
+            </ul>
           </div>
-          <div
-            class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-center"
-          >
-            <div
-              class="w-24 h-24 bg-white rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg p-3"
-            >
-              <img
-                src="logos/ytu.png"
-                alt="Yıldız Technical University"
-                class="w-full h-full object-contain"
-              />
+
+          <div class="bg-white/5 rounded-2xl p-8 border border-white/10 hover:border-teal-500/30 transition-all duration-300">
+            <div class="w-14 h-14 bg-gradient-to-r from-teal-600 to-emerald-600 rounded-xl flex items-center justify-center mb-5">
+              <i class="fas fa-cloud text-white text-xl" aria-hidden="true"></i>
             </div>
-            <h3
-              class="text-lg font-semibold text-white mb-4"
-              data-translate="ref2.title"
-            >
-              Yıldız Technical University
-            </h3>
-            <p
-              class="text-slate-300 leading-relaxed"
-              data-translate="ref2.desc"
-            >
-              Leading technical university providing academic expertise and
-              research support for our educational programs.
-            </p>
-          </div>
-          <div
-            class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-center"
-          >
-            <div
-              class="w-24 h-24 bg-white rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg p-3"
-            >
-              <img
-                src="logos/aile.png"
-                alt="Ministry of Family and Social Services"
-                class="w-full h-full object-contain"
-              />
-            </div>
-            <h3
-              class="text-lg font-semibold text-white mb-4"
-              data-translate="ref3.title"
-            >
-              Ministry of Family and Social Services
-            </h3>
-            <p
-              class="text-slate-300 leading-relaxed"
-              data-translate="ref3.desc"
-            >
-              Turkish Republic ministry ensuring social welfare and family
-              support through professional training initiatives.
-            </p>
-          </div>
-          <div
-            class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-center"
-          >
-            <div
-              class="w-24 h-24 bg-white rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg p-3"
-            >
-              <img
-                src="logos/uab.png"
-                alt="Ministry of Transport and Infrastructure"
-                class="w-full h-full object-contain"
-              />
-            </div>
-            <h3
-              class="text-lg font-semibold text-white mb-4"
-              data-translate="ref4.title"
-            >
-              Ministry of Transport and Infrastructure
-            </h3>
-            <p
-              class="text-slate-300 leading-relaxed"
-              data-translate="ref4.desc"
-            >
-              Turkish Republic ministry overseeing transportation systems and
-              infrastructure development through specialized training.
-            </p>
-          </div>
-          <div
-            class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-center"
-          >
-            <div
-              class="w-24 h-24 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg p-3"
-            >
-              <img
-                src="logos/etik.svg"
-                alt="Board of Ethics for Civil Servants"
-                class="w-full h-full object-contain"
-              />
-            </div>
-            <h3
-              class="text-lg font-semibold text-white mb-4"
-              data-translate="ref5.title"
-            >
-              Board of Ethics for Civil Servants
-            </h3>
-            <p
-              class="text-slate-300 leading-relaxed"
-              data-translate="ref5.desc"
-            >
-              Official ethics board ensuring high standards of professional
-              conduct and integrity in public service.
-            </p>
-          </div>
-          <div
-            class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-center"
-          >
-            <div
-              class="w-24 h-24 bg-white rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg p-3"
-            >
-              <img
-                src="logos/dab.jpeg"
-                alt="Ministry of Foreign Affairs - Directorate for EU Affairs"
-                class="w-full h-full object-contain"
-              />
-            </div>
-            <h3
-              class="text-lg font-semibold text-white mb-4"
-              data-translate="ref6.title"
-            >
-              Ministry of Foreign Affairs - Directorate for EU Affairs
-            </h3>
-            <p
-              class="text-slate-300 leading-relaxed"
-              data-translate="ref6.desc"
-            >
-              Turkish Republic ministry managing international relations and EU
-              affairs through comprehensive training programs.
-            </p>
+            <h3 class="text-2xl font-bold text-white mb-3" data-translate="deploy.cloud_title">Bulut — karne.app</h3>
+            <p class="text-slate-400 leading-relaxed mb-5" data-translate="deploy.cloud_desc">karne.app üzerinde kurumunuza özel bir alan açılır, markanız ve domain'iniz ile tam entegre çalışır. Altyapı bizden, siz sadece içeriğinize odaklanın.</p>
+            <ul class="space-y-2 text-slate-400 text-sm">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-teal-400" aria-hidden="true"></i><span data-translate="deploy.cloud1">1-2 günde canlıya alın</span></li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-teal-400" aria-hidden="true"></i><span data-translate="deploy.cloud2">Kurumsal marka ve domain</span></li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-teal-400" aria-hidden="true"></i><span data-translate="deploy.cloud3">Bakım ve güncelleme bizden</span></li>
+            </ul>
           </div>
         </div>
       </div>
-      <div
-        class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-500 to-transparent"
-      ></div>
     </section>
-
-    <!-- CTA Section -->
-    <section
-      class="py-20 bg-gradient-to-r from-pink-600 to-purple-600 text-white font-inter relative"
-    >
-      <div
-        class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-pink-300 to-transparent"
-      ></div>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2
-          class="text-4xl lg:text-5xl font-bold mb-6"
-          data-translate="cta.title"
-        >
-          Ready to Start Your Learning Journey?
-        </h2>
-        <p
-          class="text-xl text-pink-100 mb-8 max-w-3xl mx-auto"
-          data-translate="cta.subtitle"
-        >
-          Join thousands of professionals who have enhanced their skills with
-          Karne
-        </p>
-        <a
-          href="#contact"
-          class="inline-flex items-center justify-center px-8 py-4 bg-white text-pink-600 font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
-          data-translate="cta.button"
-          >Get Started Today</a
-        >
-      </div>
-      <div
-        class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-pink-300 to-transparent"
-      ></div>
-    </section>
-
-    <!-- Contact Section -->
-    <section
-      id="contact"
-      class="py-20 bg-white text-gray-900 font-inter relative"
-    >
-      <div
-        class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"
-      ></div>
+    <section id="references" aria-labelledby="references-heading" class="py-16 sm:py-20 lg:py-24 bg-slate-900 text-white font-inter">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-          <h2
-            class="text-4xl lg:text-5xl font-bold mb-6 text-gray-900"
-            data-translate="contact.title"
-          >
-            Contact Us
-          </h2>
+          <span class="inline-block bg-white/5 text-slate-300 text-sm font-semibold px-4 py-1.5 rounded-full mb-4 border border-white/10" data-translate="references.badge">Güvenilir Ortaklar</span>
+          <h2 id="references-heading" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6 text-white" data-translate="references.title">Referanslar ve Ortaklarımız</h2>
+          <p class="text-base sm:text-lg lg:text-xl text-slate-400 max-w-3xl mx-auto" data-translate="references.subtitle">Türkiye'nin önde gelen kamu kurumları ve akademik kuruluşlar Karne'ye güveniyor</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="reference-card bg-white/5 rounded-2xl p-8 border border-white/10 hover:border-blue-500/30 hover:bg-white/10 transition-all duration-300 hover:scale-105 text-center">
+            <div class="w-20 h-20 bg-white rounded-xl flex items-center justify-center mx-auto mb-5 shadow-lg p-3">
+              <img src="logos/ab.png" alt="AB Türkiye Delegasyonu" class="w-full h-full object-contain" loading="lazy" width="56" height="56" />
+            </div>
+            <h3 class="text-base font-semibold text-white mb-3" data-translate="ref1.title">Avrupa Birliği Türkiye Delegasyonu</h3>
+            <p class="text-slate-400 text-sm leading-relaxed" data-translate="ref1.desc">Türkiye'deki resmi AB temsilciliği; eğitim girişimlerini ve mesleki gelişim programlarını destekler.</p>
+          </div>
+          <div class="reference-card bg-white/5 rounded-2xl p-8 border border-white/10 hover:border-teal-500/30 hover:bg-white/10 transition-all duration-300 hover:scale-105 text-center">
+            <div class="w-20 h-20 bg-white rounded-xl flex items-center justify-center mx-auto mb-5 shadow-lg p-3">
+              <img src="logos/ytu.png" alt="Yıldız Teknik Üniversitesi" class="w-full h-full object-contain" loading="lazy" width="56" height="56" />
+            </div>
+            <h3 class="text-base font-semibold text-white mb-3" data-translate="ref2.title">Yıldız Teknik Üniversitesi</h3>
+            <p class="text-slate-400 text-sm leading-relaxed" data-translate="ref2.desc">Eğitim programlarımıza akademik uzmanlık ve araştırma desteği sağlayan köklü teknik üniversite.</p>
+          </div>
+          <div class="reference-card bg-white/5 rounded-2xl p-8 border border-white/10 hover:border-emerald-500/30 hover:bg-white/10 transition-all duration-300 hover:scale-105 text-center">
+            <div class="w-20 h-20 bg-white rounded-xl flex items-center justify-center mx-auto mb-5 shadow-lg p-3">
+              <img src="logos/aile.png" alt="Aile ve Sosyal Hizmetler Bakanlığı" class="w-full h-full object-contain" loading="lazy" width="56" height="56" />
+            </div>
+            <h3 class="text-base font-semibold text-white mb-3" data-translate="ref3.title">Aile ve Sosyal Hizmetler Bakanlığı</h3>
+            <p class="text-slate-400 text-sm leading-relaxed" data-translate="ref3.desc">Mesleki eğitim girişimleriyle sosyal refah ve aile desteğini güvence altına alan Türkiye Cumhuriyeti bakanlığı.</p>
+          </div>
+          <div class="reference-card bg-white/5 rounded-2xl p-8 border border-white/10 hover:border-blue-500/30 hover:bg-white/10 transition-all duration-300 hover:scale-105 text-center">
+            <div class="w-20 h-20 bg-white rounded-xl flex items-center justify-center mx-auto mb-5 shadow-lg p-3">
+              <img src="logos/uab.png" alt="Ulaştırma ve Altyapı Bakanlığı" class="w-full h-full object-contain" loading="lazy" width="56" height="56" />
+            </div>
+            <h3 class="text-base font-semibold text-white mb-3" data-translate="ref4.title">Ulaştırma ve Altyapı Bakanlığı</h3>
+            <p class="text-slate-400 text-sm leading-relaxed" data-translate="ref4.desc">Ulaşım sistemleri ve altyapı geliştirme alanında özel eğitimler sunan Türkiye Cumhuriyeti bakanlığı.</p>
+          </div>
+          <div class="reference-card bg-white/5 rounded-2xl p-8 border border-white/10 hover:border-teal-500/30 hover:bg-white/10 transition-all duration-300 hover:scale-105 text-center">
+            <div class="w-20 h-20 bg-slate-700 rounded-xl flex items-center justify-center mx-auto mb-5 shadow-lg p-3">
+              <img src="logos/etik.svg" alt="Kamu Görevlileri Etik Kurulu" class="w-full h-full object-contain" loading="lazy" width="56" height="56" />
+            </div>
+            <h3 class="text-base font-semibold text-white mb-3" data-translate="ref5.title">Kamu Görevlileri Etik Kurulu</h3>
+            <p class="text-slate-400 text-sm leading-relaxed" data-translate="ref5.desc">Kamu hizmetinde yüksek mesleki etik standartlarını ve dürüstlüğü güvence altına alan resmi kurul.</p>
+          </div>
+          <div class="reference-card bg-white/5 rounded-2xl p-8 border border-white/10 hover:border-emerald-500/30 hover:bg-white/10 transition-all duration-300 hover:scale-105 text-center">
+            <div class="w-20 h-20 bg-white rounded-xl flex items-center justify-center mx-auto mb-5 shadow-lg p-3">
+              <img src="logos/dab.jpeg" alt="Dışişleri Bakanlığı AB İşleri Genel Müdürlüğü" class="w-full h-full object-contain" loading="lazy" width="56" height="56" />
+            </div>
+            <h3 class="text-base font-semibold text-white mb-3" data-translate="ref6.title">Dışişleri Bakanlığı — AB İşleri Genel Müdürlüğü</h3>
+            <p class="text-slate-400 text-sm leading-relaxed" data-translate="ref6.desc">Uluslararası ilişkiler ve AB uyum süreçlerini kapsamlı eğitim programlarıyla yürüten Türkiye Cumhuriyeti bakanlığı.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="faq" aria-labelledby="faq-heading" class="py-16 sm:py-20 lg:py-24 bg-gray-50 font-inter">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <span class="inline-block bg-blue-50 text-blue-600 text-sm font-semibold px-4 py-1.5 rounded-full mb-4 border border-blue-100" data-translate="faq.badge">Sık Sorulan Sorular</span>
+          <h2 id="faq-heading" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4" data-translate="faq.title">Aklınızdaki <span class="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Sorular</span></h2>
+          <p class="text-xl text-gray-600" data-translate="faq.subtitle">Karne hakkında en çok merak edilenler</p>
+        </div>
+        <div class="space-y-4">
+
+          <details class="group bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-semibold text-gray-900 hover:text-blue-600 transition-colors" role="button" aria-expanded="false">
+              <span data-translate="faq.q1">Karne nedir ve kimler için uygundur?</span>
+              <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform duration-200" aria-hidden="true"></i>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4" data-translate="faq.a1">
+              Karne, yapay zeka destekli modern bir <strong>Öğrenme Deneyimi Platformu</strong>'dur (LXP). Özel sektör ve kamu — her tür kurum ve kuruluş için uygundur. İçeriklerini kolayca hazırlayıp kullanıma açmak isteyen herkes Karne'yi teknik bilgiye ihtiyaç duymadan kullanabilir.
+            </div>
+          </details>
+
+          <details class="group bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-semibold text-gray-900 hover:text-blue-600 transition-colors" role="button" aria-expanded="false">
+              <span data-translate="faq.q2">Yapay zeka ile nasıl eğitim içeriği üretebilirim?</span>
+              <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform duration-200" aria-hidden="true"></i>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4" data-translate="faq.a2">
+              Karne'de üç farklı AI içerik üretim yöntemi vardır: <strong>(1)</strong> PDF, Word veya PowerPoint dosyanızı yükleyin — AI otomatik kurs yapısı, özetler ve test soruları oluşturur. <strong>(2)</strong> Eğitim konunuzu yazın — AI önce taslak çıkarır, ardından tam içeriği hazırlar. <strong>(3)</strong> PDF belgelerinizi AI seslendirmesiyle eğitim videolarına dönüştürün.
+            </div>
+          </details>
+
+          <details class="group bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-semibold text-gray-900 hover:text-blue-600 transition-colors" role="button" aria-expanded="false">
+              <span data-translate="faq.q3">Kullanıcı ve içerik sınırı var mı?</span>
+              <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform duration-200" aria-hidden="true"></i>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4" data-translate="faq.a3">
+              Hayır. Karne'de <strong>kullanıcı ve eğitim içeriği sınırı yoktur</strong>. 5 kişi de kullansa, 50.000 kişi de kullansa fiyat değişmez. İçerik sayısı artsa da ek maliyet oluşmaz. Gerçek anlamda ölçeklenebilir bir platform.
+            </div>
+          </details>
+
+          <details class="group bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-semibold text-gray-900 hover:text-blue-600 transition-colors" role="button" aria-expanded="false">
+              <span data-translate="faq.q4">Karne'yi kendi sunucularımıza kurabilir miyiz?</span>
+              <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform duration-200" aria-hidden="true"></i>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4" data-translate="faq.a4">
+              Evet. Karne iki farklı dağıtım seçeneği sunar: <strong>Yerinde kurulum</strong> (platform kurumunuzun kendi sunucularına kurulur, tüm veriler sizde kalır) ve <strong>Bulut seçeneği</strong> (karne.app üzerinde kurumunuza özel alan, 1–2 günde canlıya alınır).
+            </div>
+          </details>
+
+          <details class="group bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-semibold text-gray-900 hover:text-blue-600 transition-colors" role="button" aria-expanded="false">
+              <span data-translate="faq.q5">Karne klasik LMS'den ne farkı var?</span>
+              <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform duration-200" aria-hidden="true"></i>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4" data-translate="faq.a5">
+              Klasik LMS'ler statik içerik yönetimi sunar ve teknik ekip gerektirir. Karne ise <strong>AI destekli içerik üretimi, oyunlaştırma, yetenek değerlendirme, kariyer yolu ve oryantasyon</strong> gibi özelliklerle tam bir öğrenme deneyimi platformudur. Teknik bilgisi olmayan herkes yönetebilir, kullanıcı sınırı yoktur ve büyüdükçe maliyet artmaz.
+            </div>
+          </details>
+
+          <details class="group bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-semibold text-gray-900 hover:text-blue-600 transition-colors" role="button" aria-expanded="false">
+              <span data-translate="faq.q6">Karne KVKK uyumlu mu?</span>
+              <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform duration-200" aria-hidden="true"></i>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4" data-translate="faq.a6">
+              Evet. Karne <strong>KVKK</strong> (Kişisel Verilerin Korunması Kanunu) ile tam uyumludur. Yerinde kurulum seçeneğinde tüm veriler kurumunuzun kendi altyapısında tutulur.
+            </div>
+          </details>
+
+          <details class="group bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-semibold text-gray-900 hover:text-blue-600 transition-colors" role="button" aria-expanded="false">
+              <span data-translate="faq.q7">Karne, Moodle veya diğer LMS'lere göre ne avantaj sağlar?</span>
+              <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform duration-200" aria-hidden="true"></i>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4" data-translate="faq.a7">
+              Geleneksel LMS'ler genellikle açık kaynaklıdır ama kurulum, bakım ve içerik üretimi için teknik ekip gerektirir. Karne'de <strong>teknik bilgi gerekmez</strong>; yapay zeka içeriği sizin için üretir. Kullanıcı başına lisans yoktur — büyüdükçe maliyet artmaz. Oyunlaştırma, yetenek değerlendirme ve kariyer yolu gibi özellikler kutudan çıkar; ek modül veya eklenti gerekmez.
+            </div>
+          </details>
+
+          <details class="group bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-semibold text-gray-900 hover:text-blue-600 transition-colors" role="button" aria-expanded="false">
+              <span data-translate="faq.q8">Kaç dakikada eğitim içeriği hazırlanabilir?</span>
+              <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform duration-200" aria-hidden="true"></i>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4" data-translate="faq.a8">
+              Klasik yöntemlerle saatler, bazen günler süren içerik hazırlama süreci Karne'de <strong>dakikalara iner</strong>. Mevcut bir PDF veya PowerPoint belgenizi yüklediğinizde yapay zeka; kurs bölümleri, ders özetleri ve test sorularını ortalama 2–5 dakika içinde oluşturur. Bu, içerik üretim hızını klasik yönteme kıyasla yaklaşık <strong>%80 artırır</strong>.
+            </div>
+          </details>
+
+          <details class="group bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-semibold text-gray-900 hover:text-blue-600 transition-colors" role="button" aria-expanded="false">
+              <span data-translate="faq.q9">Karne sertifika veriyor mu?</span>
+              <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform duration-200" aria-hidden="true"></i>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4" data-translate="faq.a9">
+              Evet. Karne, eğitimi tamamlayan katılımcılara otomatik olarak <strong>dijital sertifika</strong> üretir. Sertifikalar QR kod içerir; herhangi biri QR kodu okutarak sertifikanın gerçekliğini anında doğrulayabilir. Kurumunuzun logosu ve markasıyla özelleştirilebilir.
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+    <section class="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-blue-600 via-teal-600 to-emerald-700 text-white font-inter relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6" data-translate="cta_section.title">Üretin. Yönetin. Geliştirin.<br /><span class="text-blue-200">Kurumunuzun Tüm Öğrenme Deneyimi Tek Platformda.</span></h2>
+        <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto" data-translate="cta_section.subtitle">Demo'ya kadar ücret yok, taahhüt yok. Uzmanlarımız size platformu canlı göstersin, kurumunuza özel bir çözüm planlayalım.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#contact" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-blue-700 font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" data-translate="cta_section.button_primary">
+            <i class="fas fa-rocket" aria-hidden="true"></i> Ücretsiz Demo İste
+          </a>
+          <a href="https://my.karne.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl border border-white/30 transition-all duration-300 transform hover:scale-105" data-translate="cta_section.button_secondary">
+            <i class="fas fa-arrow-right-to-bracket" aria-hidden="true"></i> Platforma Giriş Yap
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="contact" aria-labelledby="contact-heading" class="py-16 sm:py-20 lg:py-24 bg-white text-gray-900 font-inter">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span class="inline-block bg-blue-50 text-blue-600 text-sm font-semibold px-4 py-1.5 rounded-full mb-4 border border-blue-100" data-translate="contact.badge">Hızlı Yanıt</span>
+          <h2 id="contact-heading" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6 text-gray-900" data-translate="contact.title">Bizimle İletişime Geçin</h2>
+          <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto" data-translate="contact.subtitle">Demo taleplerinize 24 saat içinde geri dönüyoruz</p>
         </div>
         <div class="grid lg:grid-cols-2 gap-16">
           <div class="space-y-8">
             <div class="flex items-center space-x-4">
-              <div
-                class="w-12 h-12 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl flex items-center justify-center"
-              >
-                <i class="fas fa-envelope text-white text-xl"></i>
-              </div>
+              <div class="w-14 h-14 bg-gradient-to-r from-blue-600 to-teal-600 rounded-xl flex items-center justify-center flex-shrink-0"><i class="fas fa-envelope text-white text-xl" aria-hidden="true"></i></div>
               <div>
-                <h3
-                  class="text-xl font-semibold text-gray-900 mb-1"
-                  data-translate="contact.email"
-                >
-                  Email
-                </h3>
-                <p class="text-gray-600">info@milapasa.com</p>
+                <h3 class="text-xl font-bold text-gray-900 mb-1" data-translate="contact.email">E-posta</h3>
+                <a href="mailto:info@milapasa.com" class="text-gray-600 hover:text-blue-600 transition-colors">info@milapasa.com</a>
               </div>
             </div>
             <div class="flex items-center space-x-4">
-              <div
-                class="w-12 h-12 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl flex items-center justify-center"
-              >
-                <i class="fas fa-phone text-white text-xl"></i>
-              </div>
+              <div class="w-14 h-14 bg-gradient-to-r from-blue-600 to-teal-600 rounded-xl flex items-center justify-center flex-shrink-0"><i class="fas fa-phone text-white text-xl" aria-hidden="true"></i></div>
               <div>
-                <h3
-                  class="text-xl font-semibold text-gray-900 mb-1"
-                  data-translate="contact.phone"
-                >
-                  Phone
-                </h3>
-                <p class="text-gray-600">+90 535 104 94 35</p>
+                <h3 class="text-xl font-bold text-gray-900 mb-1" data-translate="contact.phone">Telefon</h3>
+                <a href="tel:+905351049435" class="text-gray-600 hover:text-blue-600 transition-colors">+90 535 104 94 35</a>
               </div>
             </div>
-            <div class="flex items-center space-x-4">
-              <div
-                class="w-12 h-12 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl flex items-center justify-center"
-              >
-                <i class="fas fa-map-marker-alt text-white text-xl"></i>
-              </div>
+            <div class="flex items-start space-x-4">
+              <div class="w-14 h-14 bg-gradient-to-r from-blue-600 to-teal-600 rounded-xl flex items-center justify-center flex-shrink-0"><i class="fas fa-location-dot text-white text-xl" aria-hidden="true"></i></div>
               <div>
-                <h3
-                  class="text-xl font-semibold text-gray-900 mb-1"
-                  data-translate="contact.address"
-                >
-                  Address
-                </h3>
-                <p class="text-gray-600 leading-relaxed">
-                  ARDVENTURE, Söğütözü Cd. No: 2,<br />
-                  Koç Kuleleri C Blok 17,<br />
-                  06510 Çankaya/Ankara, Türkiye
-                </p>
+                <h3 class="text-xl font-bold text-gray-900 mb-1" data-translate="contact.address">Adres</h3>
+                <address class="text-gray-600 not-italic leading-relaxed">ARDVENTURE, Söğütözü Cd. No: 2,<br />Koç Kuleleri C Blok 17,<br />06510 Çankaya/Ankara, Türkiye</address>
               </div>
+            </div>
+            <div class="bg-gradient-to-r from-blue-50 to-teal-50 rounded-2xl p-6 border border-blue-100">
+              <h4 class="font-bold text-gray-900 mb-3" data-translate="contact.why_title">Demo'da sizi neler bekliyor?</h4>
+              <ul class="space-y-2 text-gray-600 text-sm">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500" aria-hidden="true"></i><span data-translate="contact.why1">AI içerik üretiminin canlı demosu</span></li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500" aria-hidden="true"></i><span data-translate="contact.why2">Kurumunuza özel fiyat teklifi</span></li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500" aria-hidden="true"></i><span data-translate="contact.why3">Yerinde kurulum veya bulut danışmanlığı</span></li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500" aria-hidden="true"></i><span data-translate="contact.why4">30 günlük ücretsiz deneme imkânı</span></li>
+              </ul>
             </div>
           </div>
-          <div
-            class="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg"
-          >
-            <form
-              id="contactForm"
-              class="space-y-6"
-              method="POST"
-              action="/api/contact"
-            >
+          <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg">
+            <form id="contactForm" class="space-y-5" novalidate onsubmit="event.preventDefault()">
               <div>
-                <label
-                  for="contactName"
-                  class="sr-only"
-                  data-translate="contact.form.name"
-                  >Your Name</label
-                >
-                <input
-                  type="text"
-                  id="contactName"
-                  name="name"
-                  placeholder="Your Name"
-                  data-placeholder-translate="contact.form.name"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-                  required
-                  aria-required="true"
-                  maxlength="100"
-                />
+                <label for="contactName" class="block text-sm font-semibold text-gray-700 mb-1.5" data-translate="contact.form.name">Adınız Soyadınız</label>
+                <input type="text" id="contactName" name="name" placeholder="Adınız Soyadınız" data-placeholder-translate="contact.form.name" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" required aria-required="true" maxlength="100" />
               </div>
               <div>
-                <label
-                  for="contactEmail"
-                  class="sr-only"
-                  data-translate="contact.form.email"
-                  >Your Email</label
-                >
-                <input
-                  type="email"
-                  id="contactEmail"
-                  name="email"
-                  placeholder="Your Email"
-                  data-placeholder-translate="contact.form.email"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-                  required
-                  aria-required="true"
-                  maxlength="255"
-                />
+                <label for="contactEmail" class="block text-sm font-semibold text-gray-700 mb-1.5" data-translate="contact.form.email">Kurumsal E-posta</label>
+                <input type="email" id="contactEmail" name="email" placeholder="ad@sirket.com" data-placeholder-translate="contact.form.email" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" required aria-required="true" maxlength="255" />
               </div>
               <div>
-                <label
-                  for="contactMessage"
-                  class="sr-only"
-                  data-translate="contact.form.message"
-                  >Your Message</label
-                >
-                <textarea
-                  id="contactMessage"
-                  name="message"
-                  placeholder="Your Message"
-                  data-placeholder-translate="contact.form.message"
-                  rows="5"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-                  required
-                  aria-required="true"
-                  maxlength="2000"
-                ></textarea>
+                <label for="contactMessage" class="block text-sm font-semibold text-gray-700 mb-1.5" data-translate="contact.form.message">Mesajınız</label>
+                <textarea id="contactMessage" name="message" placeholder="Kurumunuz ve ihtiyaçlarınız hakkında kısaca bilgi verin" data-placeholder-translate="contact.form.message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none" required aria-required="true" maxlength="2000"></textarea>
               </div>
-              <!-- Cloudflare Turnstile -->
-              <div
-                class="cf-turnstile flex justify-center"
-                data-sitekey="0x4AAAAAACFPncpW6lGVTcRY"
-                data-theme="light"
-                data-language="auto"
-                data-size="normal"
-              ></div>
-              <button
-                type="submit"
-                id="submitBtn"
-                class="w-full px-8 py-4 bg-gradient-to-r from-pink-600 to-purple-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
-                data-translate="contact.form.submit"
-              >
-                Send Message
-              </button>
-              <div
-                id="formMessage"
-                class="hidden mt-4 p-4 rounded-lg text-center"
-              ></div>
+              <div class="cf-turnstile flex justify-center" data-sitekey="0x4AAAAAACFPncpW6lGVTcRY" data-theme="light" data-language="auto" data-size="normal"></div>
+              <button type="submit" id="submitBtn" class="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-teal-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed" data-translate="contact.form.submit">Demo Talep Et</button>
+              <div id="formMessage" class="hidden mt-4 p-4 rounded-xl text-center text-sm"></div>
             </form>
           </div>
         </div>
       </div>
-      <div
-        class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"
-      ></div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-16 bg-slate-900 text-white font-inter relative">
-      <div
-        class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent"
-      ></div>
+    </main>
+    <footer class="py-16 bg-slate-950 text-white font-inter">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           <div class="lg:col-span-2">
-            <h3 class="text-2xl font-bold text-pink-400 mb-4">Karne</h3>
-            <p
-              class="text-slate-400 leading-relaxed"
-              data-translate="footer.description"
-            >
-              Karne, devlet memurları, kamu görevlileri ve kamu sektörü
-              profesyonelleri için özel olarak tasarlanmış kapsamlı bir
-              e-öğrenme platformudur. Düşük maliyetli, kullanımı kolay ve hızla
-              kurulabilir çözümümüzle organizasyonunuzun eğitim süreçlerini
-              modernize edin ve çalışanlarınızın profesyonel gelişimini
-              destekleyin.
+            <div class="mb-4"><img src="logos/karne-logo-white.svg" alt="Karne" class="h-9 w-auto" /></div>
+            <p class="text-slate-400 leading-relaxed max-w-sm" data-translate="footer.description">
+              Yapay zeka destekli Modern Öğrenme Deneyimi Platformu. İçeriklerinizi kolayca üretin, oyunlaştırma ile öğrenmeyi motive edin, yetenek ve kariyer gelişimini yönetin. Özel sektör ve kamu tüm kurumlar için. Sınırsız kullanıcı, sınırsız içerik.
             </p>
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span class="inline-flex items-center gap-1.5 bg-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-lg border border-slate-600"><i class="fas fa-wand-magic-sparkles text-blue-400" aria-hidden="true"></i> <span data-translate="footer.badge_ai">AI Destekli</span></span>
+              <span class="inline-flex items-center gap-1.5 bg-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-lg border border-slate-600"><i class="fas fa-infinity text-teal-400" aria-hidden="true"></i> <span data-translate="footer.badge_unlimited">Sınırsız</span></span>
+              <span class="inline-flex items-center gap-1.5 bg-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-lg border border-slate-600"><i class="fas fa-shield-halved text-emerald-400" aria-hidden="true"></i> <span data-translate="footer.badge_kvkk">KVKK</span></span>
+            </div>
           </div>
-          <div></div>
           <div>
-            <h3
-              class="text-lg font-semibold text-white mb-4"
-              data-translate="footer.quick_links"
-            >
-              Quick Links
-            </h3>
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="#about"
-                  class="text-slate-300 hover:text-pink-400 transition-colors duration-300"
-                  data-translate="footer.about_link"
-                  >Hakkımızda</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#references"
-                  class="text-slate-300 hover:text-pink-400 transition-colors duration-300"
-                  data-translate="footer.references_link"
-                  >Referanslar</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  class="text-slate-300 hover:text-pink-400 transition-colors duration-300"
-                  data-translate="footer.contact_link"
-                  >İletişim</a
-                >
-              </li>
-            </ul>
+            <h4 class="text-base font-bold text-white mb-4" id="footer-nav-platform" data-translate="footer.platform">Platform</h4>
+            <nav aria-labelledby="footer-nav-platform">
+              <ul class="space-y-2.5">
+                <li><a href="#ai-content" class="text-slate-400 hover:text-blue-400 transition-colors text-sm" data-translate="nav.ai_content">AI İçerik Üretimi</a></li>
+                <li><a href="#pdf-video" class="text-slate-400 hover:text-blue-400 transition-colors text-sm">PDF'den Video</a></li>
+                <li><a href="#features" class="text-slate-400 hover:text-blue-400 transition-colors text-sm" data-translate="footer.features_link">Özellikler</a></li>
+                <li><a href="#ogrenme-yollari" class="text-slate-400 hover:text-blue-400 transition-colors text-sm">Öğrenme Yolları</a></li>
+                <li><a href="#yetkinlikler" class="text-slate-400 hover:text-blue-400 transition-colors text-sm">Yetkinlikler</a></li>
+                <li><a href="#references" class="text-slate-400 hover:text-blue-400 transition-colors text-sm" data-translate="footer.references_link">Referanslar</a></li>
+                <li><a href="#contact" class="text-slate-400 hover:text-blue-400 transition-colors text-sm" data-translate="footer.contact_link">İletişim</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <h4 class="text-base font-bold text-white mb-4" id="footer-nav-solutions">Çözümler</h4>
+            <nav aria-labelledby="footer-nav-solutions">
+              <ul class="space-y-2.5">
+                <li><a href="use-cases/oryantasyon.html" class="text-slate-400 hover:text-blue-400 transition-colors text-sm">Oryantasyon</a></li>
+                <li><a href="use-cases/satis-ekipleri.html" class="text-slate-400 hover:text-blue-400 transition-colors text-sm">Satış Ekipleri</a></li>
+                <li><a href="use-cases/liderlik.html" class="text-slate-400 hover:text-blue-400 transition-colors text-sm">Liderlik</a></li>
+                <li><a href="use-cases/teknik-egitimler.html" class="text-slate-400 hover:text-blue-400 transition-colors text-sm">Teknik Eğitimler</a></li>
+                <li><a href="use-cases/kamu-kurumlari.html" class="text-slate-400 hover:text-blue-400 transition-colors text-sm">Kamu Kurumları</a></li>
+                <li><a href="use-cases/stk-sivil-toplum.html" class="text-slate-400 hover:text-blue-400 transition-colors text-sm">STK &amp; Sivil Toplum</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <h4 class="text-base font-bold text-white mb-4" id="footer-nav-start" data-translate="footer.get_started">Başlayın</h4>
+            <nav aria-labelledby="footer-nav-start">
+              <ul class="space-y-2.5 mb-6">
+                <li><a href="https://my.karne.app" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-blue-400 transition-colors text-sm" data-translate="footer.login_link">Giriş Yap</a></li>
+                <li><a href="#contact" class="text-slate-400 hover:text-blue-400 transition-colors text-sm" data-translate="footer.demo_link">Demo İste</a></li>
+              </ul>
+            </nav>
+            <h4 class="text-base font-bold text-white mb-3" data-translate="footer.contact_info">İletişim</h4>
+            <a href="mailto:info@milapasa.com" class="text-slate-400 hover:text-blue-400 transition-colors text-sm block mb-1">info@milapasa.com</a>
+            <a href="tel:+905351049435" class="text-slate-400 hover:text-blue-400 transition-colors text-sm block">+90 535 104 94 35</a>
           </div>
         </div>
-        <div class="border-t border-gray-700 pt-8 text-center">
-          <p class="text-slate-400">
-            &copy; <span id="currentYear"></span> Karne.
-            <span data-translate="footer.copyright">Tüm hakları saklıdır.</span>
-          </p>
+        <div class="border-t border-slate-700 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p class="text-slate-400 text-sm">&copy; <span id="currentYear"></span> Karne — <span data-translate="footer.copyright">Tüm hakları saklıdır.</span></p>
+          <p class="text-slate-400 text-xs" data-translate="footer.tagline">Modern Öğrenme Deneyimi Platformu</p>
         </div>
       </div>
     </footer>
+    <!-- mobile menu (body-level so nav transitions don't create containing block) -->
+    <div id="mobileMenu" class="km-menu" aria-hidden="true">
+      <div class="km-menu-header">
+        <button id="mobileMenuClose" class="km-menu-close" aria-label="Menüyü kapat" type="button">
+          <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      <div class="km-menu-body">
+        <nav class="km-menu-nav">
+          <a href="#home" class="km-menu-link km-menu-link--primary mobile-menu-link" data-translate="nav.home">Ana Sayfa</a>
+          <div class="km-menu-accordion">
+            <button id="mobileFeatToggle" class="km-menu-link km-menu-link--primary km-menu-toggle" type="button">
+              Özellikler
+              <svg id="mobileFeatChevron" class="km-menu-chevron" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </button>
+            <div id="mobileFeatLinks" class="km-menu-sub hidden">
+              <a href="features/oyunlastirma.html" class="km-menu-link km-menu-link--sub mobile-menu-link">🎮 Oyunlaştırma</a>
+              <a href="features/yetkinlik-degerlendirme.html" class="km-menu-link km-menu-link--sub mobile-menu-link">🧩 Yetkinlik Değerlendirme</a>
+              <a href="features/ogrenme-yollari.html" class="km-menu-link km-menu-link--sub mobile-menu-link">🛤️ Öğrenme Yolları</a>
+              <a href="features/ai-icerik-uretimi.html" class="km-menu-link km-menu-link--sub mobile-menu-link">🤖 AI İçerik Üretimi</a>
+              <a href="features/raporlama-analitik.html" class="km-menu-link km-menu-link--sub mobile-menu-link">📊 Raporlama & Analitik</a>
+              <a href="features/entegrasyon-kurulum.html" class="km-menu-link km-menu-link--sub mobile-menu-link">⚙️ Entegrasyon & Kurulum</a>
+            </div>
+          </div>
+          <a href="#contact" class="km-menu-link km-menu-link--primary mobile-menu-link" data-translate="nav.contact">İletişim</a>
+          <div class="km-menu-accordion">
+            <button id="mobileUcToggle" class="km-menu-link km-menu-link--primary km-menu-toggle" type="button">
+              Kullanım Alanları
+              <svg id="mobileUcChevron" class="km-menu-chevron" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </button>
+            <div id="mobileUcLinks" class="km-menu-sub hidden">
+              <a href="use-cases/oryantasyon.html" class="km-menu-link km-menu-link--sub mobile-menu-link">🚀 Oryantasyon & İşe Alım</a>
+              <a href="use-cases/stk-sivil-toplum.html" class="km-menu-link km-menu-link--sub mobile-menu-link">🤝 STK & Sivil Toplum</a>
+              <a href="use-cases/liderlik.html" class="km-menu-link km-menu-link--sub mobile-menu-link">👑 Liderlik Geliştirme</a>
+              <a href="use-cases/satis-ekipleri.html" class="km-menu-link km-menu-link--sub mobile-menu-link">💼 Satış Ekipleri</a>
+              <a href="use-cases/kamu-kurumlari.html" class="km-menu-link km-menu-link--sub mobile-menu-link">🏛️ Kamu Kurumları</a>
+              <a href="use-cases/teknik-egitimler.html" class="km-menu-link km-menu-link--sub mobile-menu-link">⚙️ Teknik Eğitimler</a>
+            </div>
+          </div>
+          <a href="#contact" class="km-menu-cta km-menu-cta--primary mobile-menu-link" data-translate="nav.demo">Demo İste</a>
+          <a href="https://my.karne.app/register" target="_blank" rel="noopener noreferrer" class="km-menu-cta km-menu-cta--secondary mobile-menu-link" data-translate="nav.register">Üye Ol</a>
+          <a href="https://my.karne.app" target="_blank" rel="noopener noreferrer" class="km-menu-login mobile-menu-link" data-translate="nav.login">Giriş</a>
+        </nav>
+        <div class="km-menu-langs">
+          <button class="lang-option km-menu-lang" data-lang="tr"><span class="lang-flag"></span><span>TR</span></button>
+          <button class="lang-option km-menu-lang" data-lang="en"><span class="lang-flag"></span><span>EN</span></button>
+          <button class="lang-option km-menu-lang" data-lang="de"><span class="lang-flag"></span><span>DE</span></button>
+          <button class="lang-option km-menu-lang" data-lang="fr"><span class="lang-flag"></span><span>FR</span></button>
+        </div>
+      </div>
+    </div>
 
-    <!-- Cloudflare Turnstile -->
-    <script
-      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-      async
-      defer
-    ></script>
-    <!-- EmailJS -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script src="script.js"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
+

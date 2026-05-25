@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bir şeyler ters gitti — Karne</title>
+    <meta name="description" content="Karne'de geçici bir sorun oluştu. Birkaç dakika sonra tekrar deneyin." />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#0d9488" />
+
+    <link rel="icon" type="image/svg+xml" href="/logos/karne-logo-optimized.svg" />
+    <link rel="stylesheet" href="/dist/output.css" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" />
+  </head>
+  <body class="font-inter bg-gradient-to-br from-blue-50 via-white to-emerald-50/60 text-gray-900 min-h-screen flex flex-col">
+
+    <header class="w-full">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+        <a href="/" class="inline-flex items-center" aria-label="Karne ana sayfa">
+          <img src="/logos/karne-logo-optimized.svg" alt="Karne" class="h-9 w-auto" />
+        </a>
+      </div>
+    </header>
+
+    <main class="flex-1 flex items-center justify-center px-4 py-12 sm:py-20">
+      <div class="max-w-xl text-center">
+        <div class="w-20 h-20 mx-auto mb-6 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center">
+          <i class="fas fa-triangle-exclamation text-3xl" aria-hidden="true"></i>
+        </div>
+
+        <h1 id="error-title" class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
+          Bir şeyler ters gitti
+        </h1>
+        <p id="error-message" class="text-base sm:text-lg text-gray-600 leading-relaxed mb-2">
+          Sunucumuzda geçici bir sorun oluştu. Lütfen birkaç dakika sonra tekrar deneyin.
+        </p>
+        <p id="error-code" class="text-sm text-gray-400 font-mono mb-10"></p>
+
+        <div class="flex flex-col sm:flex-row gap-3 justify-center mb-8">
+          <button onclick="location.reload()" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white font-bold rounded-xl transition-all">
+            <i class="fas fa-rotate-right" aria-hidden="true"></i> Tekrar Dene
+          </button>
+          <a href="/" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold rounded-xl border border-gray-200 transition-all">
+            <i class="fas fa-house" aria-hidden="true"></i> Ana Sayfa
+          </a>
+        </div>
+
+        <p class="text-sm text-gray-500">
+          Sorun devam ederse <a href="mailto:info@milapasa.com" class="text-blue-600 hover:underline font-semibold">info@milapasa.com</a> adresine ulaşabilirsiniz.
+        </p>
+      </div>
+    </main>
+
+    <footer class="border-t border-gray-200/60 py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-gray-500">
+        &copy; <span id="currentYear"></span> Karne — Modern Öğrenme Deneyimi Platformu
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+      // Customize copy based on ?code= query (set by Apache/Nginx error handler)
+      const code = new URLSearchParams(location.search).get("code");
+      const codeMap = {
+        "403": {
+          title: "Erişim engellendi",
+          message: "Bu sayfayı görüntüleme yetkiniz yok. Yanlış bir adrese geldiyseniz ana sayfaya dönebilirsiniz.",
+        },
+        "500": {
+          title: "Sunucu hatası",
+          message: "Sunucumuzda beklenmeyen bir hata oluştu. Ekibimiz bilgilendirildi; birkaç dakika sonra tekrar deneyin.",
+        },
+        "503": {
+          title: "Geçici olarak hizmet dışı",
+          message: "Karne şu anda bakımda. Birkaç dakika içinde tekrar erişilebilir olacak.",
+        },
+      };
+      if (code && codeMap[code]) {
+        document.getElementById("error-title").textContent = codeMap[code].title;
+        document.getElementById("error-message").textContent = codeMap[code].message;
+        document.getElementById("error-code").textContent = "Hata kodu: " + code;
+        document.title = codeMap[code].title + " — Karne";
+      }
+    </script>
+  </body>
+</html>

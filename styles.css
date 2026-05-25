@@ -59,17 +59,7 @@ body {
   position: relative;
 }
 
-.text-white {
-  color: #fff !important;
-}
-
-.text-white a {
-  color: #fff !important;
-  text-decoration: none !important;
-  font-weight: 500 !important;
-  transition: color 0.3s ease !important;
-  position: relative !important;
-}
+/* Legacy .text-white !important rules removed — Tailwind text-white in HTML now applies. */
 
 .nav-link:hover {
   color: #2563eb;
@@ -671,71 +661,7 @@ body {
   font-weight: 500;
 }
 
-/* References Section */
-.references {
-  padding: 80px 0;
-  background: white;
-}
-
-.references-subtitle {
-  text-align: center;
-  font-size: 1.1rem;
-  color: #64748b;
-  margin-bottom: 3rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.references-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.reference-card {
-  background: #f8fafc;
-  padding: 2rem;
-  border-radius: 12px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #e2e8f0;
-}
-
-.reference-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  border-color: #2563eb;
-}
-
-.reference-logo {
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1.5rem;
-}
-
-.reference-logo i {
-  font-size: 2rem;
-  color: white;
-}
-
-.reference-card h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #1e293b;
-}
-
-.reference-card p {
-  color: #64748b;
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
+/* Legacy References Section rules removed — Tailwind utilities in HTML now handle styling */
 
 /* CTA Section */
 .cta {
@@ -1072,4 +998,224 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #1d4ed8;
+}
+
+/* ─────────────────────────────────────────────────────────────
+ * Mobile responsive fixes
+ * Vanilla CSS — these rules don't require Tailwind rebuild
+ * ───────────────────────────────────────────────────────────── */
+
+/* Inline `grid-template-columns: 1fr 1.6fr` (and reverse) on landing
+ * sections collapse to single column under lg breakpoint (1024px).
+ * Affects sections in index.html, features/*, use-cases/*. */
+@media (max-width: 1023px) {
+  [style*="grid-template-columns: 1fr 1.6fr"],
+  [style*="grid-template-columns: 1.6fr 1fr"],
+  [style*="grid-template-columns:1fr 1.6fr"],
+  [style*="grid-template-columns:1.6fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+ * Mobile menu (km-menu) — fully isolated, vanilla CSS
+ * #mobileMenu is now a direct child of <body>. No Tailwind
+ * dependency, no parent containing-block surprises.
+ * ───────────────────────────────────────────────────────────── */
+
+/* Use #mobileMenu (ID) for maximum specificity — beats any Tailwind class */
+#mobileMenu.km-menu,
+.km-menu {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 9998 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  background-color: #020617 !important;  /* slate-950 hex — always opaque */
+  background: #020617 !important;
+  color: #fff !important;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto !important;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  visibility: hidden;
+  opacity: 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#mobileMenu.km-menu.is-open,
+.km-menu.is-open {
+  transform: translateX(0) !important;
+  visibility: visible !important;
+}
+
+/* Hide menu container entirely on tablet+ (md ≥ 768px) */
+@media (min-width: 768px) {
+  .km-menu { display: none; }
+}
+
+/* Sticky top bar with close button */
+.km-menu-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.25rem;
+  background-color: #020617;
+}
+
+.km-menu-close {
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.km-menu-close:hover { color: #60a5fa; }
+
+/* Scrollable content area */
+.km-menu-body {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 1.5rem 3rem;
+  background-color: #020617;
+}
+
+.km-menu-nav {
+  width: 100%;
+  max-width: 28rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.km-menu-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.km-menu-link:hover { color: #60a5fa; }
+
+.km-menu-link--primary { font-size: 1.5rem; }
+.km-menu-link--sub {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 2rem;
+  color: #cbd5e1;
+}
+
+.km-menu-chevron {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.25rem;
+  transition: transform 0.2s;
+}
+.km-menu-accordion.is-open .km-menu-chevron {
+  transform: rotate(180deg);
+}
+
+.km-menu-sub {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-bottom: 0.5rem;
+}
+.km-menu-sub.hidden { display: none; }
+
+.km-menu-cta {
+  display: block;
+  width: 100%;
+  max-width: 20rem;
+  margin: 0.5rem auto 0;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.75rem;
+  transition: opacity 0.2s;
+}
+.km-menu-cta:hover { opacity: 0.9; }
+.km-menu-cta--primary {
+  background: linear-gradient(to right, #2563eb, #0d9488);
+  margin-top: 1rem;
+}
+.km-menu-cta--secondary {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.km-menu-login {
+  display: block;
+  max-width: 20rem;
+  margin: 0 auto;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #94a3b8;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.km-menu-login:hover { color: #60a5fa; }
+
+.km-menu-langs {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 20rem;
+}
+
+.km-menu-lang {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.km-menu-lang:hover { background: rgba(255, 255, 255, 0.2); }
+.km-menu-lang .lang-flag {
+  width: 1.2em;
+  height: 0.9em;
+  display: inline-block;
+}
+
+/* Lock body scroll when menu open */
+body.km-menu-open {
+  overflow: hidden;
+  overscroll-behavior: none;
 }
